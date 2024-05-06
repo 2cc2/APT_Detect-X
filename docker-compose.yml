@@ -1,0 +1,35 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    stdin_open: true
+    tty: true
+    
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile-backend
+    ports:
+      - "5001:5001"
+    depends_on:
+      - database
+    stdin_open: true
+    tty: true
+  
+  database:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: test1
+    ports:
+      - "3306:3306"
+    # volumes:
+    #   - ./scripts/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
+    stdin_open: true
+    tty: true
