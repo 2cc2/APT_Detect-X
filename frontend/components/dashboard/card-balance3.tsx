@@ -1,48 +1,40 @@
-import { Card, CardBody } from "@nextui-org/react";
+import { Card, CardBody, CardFooter, CardHeader, Image } from "@nextui-org/react";
+import { Tag } from "antd";
 import React from "react";
-import { Community } from "../icons/community";
 
 export const CardBalance3 = () => {
   return (
-    <Card className="xl:max-w-sm bg-green-500 rounded-xl shadow-md px-3 w-full">
-      <CardBody className="py-5">
-        <div className="flex gap-2.5">
-          <Community />
-          <div className="flex flex-col">
-            <span className="text-white">Card Insurance</span>
-            <span className="text-white text-xs">1311 Cars</span>
-          </div>
+    <Card className="xl:max-w-sm bg-default-50 rounded-xl shadow-md px-3 w-full">
+      <CardHeader className="flex gap-3">
+        <div className="p-3 flex flex-col font-extrabold">
+          <span className="block text-indigo-600 xl:inline">
+            摩诃草（APT-C-09）{" "}
+          </span>
         </div>
-        <div className="flex gap-2.5 py-2 items-center">
-          <span className="text-white text-xl font-semibold">$3,910</span>
-          <span className="text-danger text-xs">- 4.5%</span>
-        </div>
-        <div className="flex items-center gap-6">
-          <div>
-            <div>
-              <span className="font-semibold text-danger text-xs">{"↓"}</span>
-              <span className="text-xs">100,930</span>
-            </div>
-            <span className="text-white text-xs">USD</span>
-          </div>
-
-          <div>
-            <div>
-              <span className="font-semibold text-danger text-xs">{"↑"}</span>
-              <span className="text-xs">4,120</span>
-            </div>
-            <span className="text-white text-xs">USD</span>
-          </div>
-
-          <div>
-            <div>
-              <span className="font-semibold text-danger text-xs">{"⭐"}</span>
-              <span className="text-xs">125</span>
-            </div>
-            <span className="text-white text-xs">VIP</span>
-          </div>
-        </div>
+      </CardHeader>
+      <CardBody className="py-1 overflow-auto" style={{ maxHeight: '150px' }}>
+        <p>
+          摩诃草组织(APT-C-09)，
+          又称HangOver、VICEROY TIGER、The Dropping Elephant、Patchwork，
+          是一个来自南亚地区的境外APT组织，该组织已持续活跃了12年。
+          摩诃草组织最早由Norman安全公司于2013年曝光，
+          随后又有其他安全厂商持续追踪并披露该组织的最新活动，
+          但该组织并未由于相关攻击行动曝光而停止对相关目标的攻击，
+          相反从2015年开始更加活跃。
+          摩诃草组织主要针对中国、巴基斯坦等亚洲地区国家进行网络间谍活动，
+          其中以窃取敏感信息为主。
+          相关攻击活动最早可以追溯到2009年11月，
+          至今还非常活跃。在针对中国地区的攻击中，
+          该组织主要针对政府机构、科研教育领域进行攻击，其中以科研教育领域为主。
+        </p>
       </CardBody>
+      <CardFooter className="gap-3">
+        <div className="flex gap-1">
+          <Tag color="green" >印度</Tag>
+          <Tag color="red" >鱼叉攻击</Tag>
+          <Tag color="red" >无文件攻击</Tag>
+        </div>
+      </CardFooter>
     </Card>
   );
 };

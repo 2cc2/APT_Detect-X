@@ -45,7 +45,7 @@ const Product: React.FC = () => (
         <p className=" mt-3 max-w-2xl text-xl text-gray-500 lg:mx-auto" >
             研究动机
         </p>
-        <div className="lg:text-center py-10" style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div className="lg:text-center py-10" style={{ display: 'flex', justifyContent: 'center' }}>
             <div style={{ width: '50%' }}>
                 <Carousel autoplay effect="fade" autoplaySpeed={3000} speed={100}>
                     <div >

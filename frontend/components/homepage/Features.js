@@ -10,25 +10,25 @@ const features = [
   {
     name: "标注难",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "恶意攻击数据占比极少，人工标注费时费力。",
     icon: GlobeAltIcon,
   },
   {
     name: "复现难",
     description:
-      "Customers can experience all the benefits free of charge by selecting the 14-day trial. Cancel anytime!",
+      "高质量标签数据难以获得，缺乏系统性复现平台。",
     icon: ScaleIcon,
   },
   {
     name: "验证难",
     description:
-      "Real-time adherence reports are available on the multiple factors of products, stocks and related sectors.",
+      "APT攻击场景模拟难，验证实验成本大。",
     icon: LightningBoltIcon,
   },
   {
-    name: "讨论难",
+    name: "......",
     description:
-      "brief summary of accounting operations, receivables, cash flows etc based onn the inventory system.",
+      "常见的检测方法可能会错过一些新型的APT攻击，甚至可能会产生较多的误报。",
     icon: AnnotationIcon,
   },
 ];
