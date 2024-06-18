@@ -17,6 +17,9 @@ body {
 /* .ant-menu-item {
   color: #2c2c2c;
 } */
+ .card:nth-child(odd) {
+   margin-top: 50px;
+ }
 
 * {
   box-sizing: border-box;

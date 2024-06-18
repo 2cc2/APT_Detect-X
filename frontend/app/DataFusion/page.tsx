@@ -60,7 +60,7 @@ const Layout = ({ children }: any) => (
 
 const TopNavbar = ({ setCurrentPage }: any) => {
     return (
-        <div className="flex justify-between p-4 " style={{ backgroundColor: '#333333' }} >
+        <div className="flex justify-between p-4 bg-gray-300" >
             <Breadcrumb className="breadcrumb-white">
                 <Breadcrumb.Item>
                     <a href="/dashboard" style={{ color: 'white' }}>
@@ -84,7 +84,7 @@ const TopNavbar = ({ setCurrentPage }: any) => {
                     </a>
                 </Breadcrumb.Item>
                 <Breadcrumb.Item>
-                    <a href="/DataFusion" onClick={() => setCurrentPage('DataFusion')} style={{ color: '#ADD8E6' }}>
+                    <a href="/DataFusion" onClick={() => setCurrentPage('DataFusion')} style={{ color: 'white' }}>
                         数据融合
                     </a>
                 </Breadcrumb.Item>

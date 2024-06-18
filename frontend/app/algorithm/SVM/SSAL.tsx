@@ -50,14 +50,11 @@ export const Show = () => {
 
 export const SVM_SSAL = () => {
     return (
-        <Tabs defaultActiveKey="2">
-            {/* <TabPane tab="算法介绍" key="1">
-                <Introduce />
-            </TabPane> */}
-            <TabPane tab={<span className="text-gray-800 font-bold text-lg">代码示例--KDD数据集</span>} key="2">
+        <Tabs defaultActiveKey="1">
+            <TabPane tab="代码示例--KDD数据集" key="1">
                 <Code />
             </TabPane>
-            <TabPane tab={<span className="text-gray-800 font-bold text-lg">代码示例--Loghub数据集</span>} key="3">
+            <TabPane tab="代码示例--Loghub数据集" key="2">
                 <Show />
             </TabPane>
         </Tabs>

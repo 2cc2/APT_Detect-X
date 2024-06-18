@@ -39,16 +39,6 @@ export const Code = () => {
 
 export const XGB_AL = () => {
     return (
-        <Tabs defaultActiveKey="2">
-            {/* <TabPane tab="算法介绍" key="1">
-                <Introduce />
-            </TabPane> */}
-            <TabPane tab={<span className="text-gray-800 font-bold text-lg">代码示例--KDD数据集</span>} key="2">
-                <Code />
-            </TabPane>
-            {/* <TabPane tab={<span className="text-gray-800 font-bold text-lg">代码示例--Loghub数据集</span>} key="3">
-                <Show />
-            </TabPane> */}
-        </Tabs>
+        <Code />
     );
 };
