@@ -1,11 +1,10 @@
 import { Tabs } from 'antd';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { KNN_AL } from './AL';
 import { KNN_S } from './S';
 import { KNN_SS } from './SS';
 import { KNN_SSAL } from './SSAL';
-import { Card, CardBody, CardFooter, CardHeader, Image } from "@nextui-org/react";
-import { Tag } from "antd";
+import { Card, CardBody, CardHeader } from "@nextui-org/react";
 
 
 const { TabPane } = Tabs;
@@ -32,7 +31,7 @@ export const Introduce_knn = () => {
     return (
         <div className="h-full lg:px-6">
             <div className="flex flex-col gap-2 grid md:grid-cols-2 grid-cols-1 2xl:grid-cols-3 gap-5  w-full">
-                <Card className="xl:max-w-sm bg-default-50 rounded-xl shadow-md px-3 w-full">
+                <Card className="xl:max-w-sm bg-blue-50 rounded-xl shadow-md px-3 w-full">
                     <CardHeader className="flex gap-3">
                         <div className="p-3 flex flex-col font-extrabold">
                             <h1 className="text-xl font-semibold">K-近邻算法</h1>
@@ -51,7 +50,7 @@ export const Introduce_knn = () => {
                         <img src="/algorithm-introduce/knn1.png" alt="description" />
                     </CardBody>
                 </Card>
-                <Card className="xl:max-w-sm bg-default-50 rounded-xl shadow-md px-3 w-full">
+                <Card className="xl:max-w-sm bg-green-50 rounded-xl shadow-md px-3 w-full">
                     <CardHeader className="flex gap-3">
                         <div className="p-3 flex flex-col font-extrabold">
                             <h1 className="text-xl font-semibold">K-近邻模型</h1>
@@ -71,7 +70,7 @@ export const Introduce_knn = () => {
                         </p>
                     </CardBody>
                 </Card>
-                <Card className="xl:max-w-sm bg-default-50 rounded-xl shadow-md px-3 w-full">
+                <Card className="xl:max-w-sm bg-red-50 rounded-xl shadow-md px-3 w-full">
                     <CardHeader className="flex gap-3">
                         <div className="p-3 flex flex-col font-extrabold">
                             <h1 className="text-xl font-semibold">Knn算法原理</h1>
@@ -92,7 +91,7 @@ export const Introduce_knn = () => {
 
                     </CardBody>
                 </Card>
-                <Card className="xl:max-w-sm bg-default-50 rounded-xl shadow-md px-3 w-full">
+                <Card className="xl:max-w-sm bg-yellow-50 rounded-xl shadow-md px-3 w-full">
                     <CardHeader className="flex gap-3">
                         <div className="p-3 flex flex-col font-extrabold">
                             <h1 className="text-xl font-semibold">Knn算法流程</h1>
@@ -102,15 +101,20 @@ export const Introduce_knn = () => {
                         <img src="/algorithm-introduce/knn3.png" alt="description" />
                     </CardBody>
                 </Card>
-                <Card className="xl:max-w-sm bg-default-50 rounded-xl shadow-md px-3 w-full">
+                <Card className="xl:max-w-sm bg-indigo-50 rounded-xl shadow-md px-3 w-full">
+                    <CardHeader className="flex gap-3">
+                        <div className="p-3 flex flex-col font-extrabold">
+                            <h1 className="text-xl font-semibold">伪代码</h1>
+                        </div>
+                    </CardHeader>
                     <CardBody className="py-1 overflow-auto" >
                         <img src="/algorithm-introduce/knn6.png" alt="description" />
                     </CardBody>
                 </Card>
-                <Card className="xl:max-w-sm bg-default-50 rounded-xl shadow-md px-3 w-full">
+                <Card className="xl:max-w-sm bg-purple-50 rounded-xl shadow-md px-3 w-full">
                     <CardHeader className="flex gap-3">
                         <div className="p-3 flex flex-col font-extrabold">
-                            <h1 className="text-xl font-semibold">优点</h1>
+                            <h1 className="text-xl font-semibold">knn算法优点</h1>
                         </div>
                     </CardHeader>
                     <CardBody className="py-1 overflow-auto" >
@@ -125,10 +129,10 @@ export const Introduce_knn = () => {
                         </p>
                     </CardBody>
                 </Card>
-                <Card className="xl:max-w-sm bg-default-50 rounded-xl shadow-md px-3 w-full">
+                <Card className="xl:max-w-sm bg-pink-50 rounded-xl shadow-md px-3 w-full">
                     <CardHeader className="flex gap-3">
                         <div className="p-3 flex flex-col font-extrabold">
-                            <h1 className="text-xl font-semibold">缺点</h1>
+                            <h1 className="text-xl font-semibold">knn算法缺点</h1>
                         </div>
                     </CardHeader>
                     <CardBody className="py-1 overflow-auto" >
@@ -141,6 +145,154 @@ export const Introduce_knn = () => {
                         </p>
                         <p>
                             特征缩放敏感：KNN对特征的尺度敏感，通常需要进行特征缩放（如标准化或归一化）
+                        </p>
+                    </CardBody>
+                </Card>
+                <Card className="xl:max-w-sm bg-pink-50 rounded-xl shadow-md px-3 w-full">
+                    <CardHeader className="flex gap-3">
+                        <div className="p-3 flex flex-col font-extrabold">
+                            <h1 className="text-xl font-semibold">自学习（Active Learning）</h1>
+                        </div>
+                    </CardHeader>
+                    <CardBody className="py-1 overflow-auto" >
+                        <p>
+                            self-training是最简单的半监督方法之一，
+                            其主要思想是找到一种方法，用未标记的数据集来扩充已标记的数据集。
+                            即首先用有标签数据训练一个分类器，然后用这个分类器对无标签数据进行分类，
+                            这样就会产生伪标签（pseudo label）或软标签（soft label），
+                            挑选一定标准的伪标签样本用来迭代训练分类器。
+                        </p>
+                    </CardBody>
+                </Card>
+                <Card className="xl:max-w-sm bg-pink-50 rounded-xl shadow-md px-3 w-full">
+                    <CardHeader className="flex gap-3">
+                        <div className="p-3 flex flex-col font-extrabold">
+                            <h1 className="text-xl font-semibold">自学习伪代码</h1>
+                        </div>
+                    </CardHeader>
+                    <CardBody className="py-1 overflow-auto" >
+                        <img src="/algorithm-introduce/knn7.png" alt="description" />
+                    </CardBody>
+                </Card>
+                <Card className="xl:max-w-sm bg-pink-50 rounded-xl shadow-md px-3 w-full">
+                    <CardHeader className="flex gap-3">
+                        <div className="p-3 flex flex-col font-extrabold">
+                            <h1 className="text-xl font-semibold">使用场景</h1>
+                        </div>
+                    </CardHeader>
+                    <CardBody className="py-1 overflow-auto" >
+                        <p>
+                            在现实生活中得到大量有标签数据需要大量时间经历，
+                            而自训练是有标签数据+无标签数据混合成的训练数据中使用的深度学习算法，
+                            可以利用自训练方法对无标记数据进行标记，实现己标记数据的扩充。
+                        </p>
+                    </CardBody>
+                </Card>
+                <Card className="xl:max-w-sm bg-pink-50 rounded-xl shadow-md px-3 w-full">
+                    <CardHeader className="flex gap-3">
+                        <div className="p-3 flex flex-col font-extrabold">
+                            <h1 className="text-xl font-semibold">优点</h1>
+                        </div>
+                    </CardHeader>
+                    <CardBody className="py-1 overflow-auto" >
+                        <p>
+                            自训练可扩展性、通用性和灵活性，
+                            在每种条件设置下均能很好地发挥作用，
+                            无论是少数据状态、多数据状态、弱数据增强还是强数据增强。
+                            并且自训练不依赖于模型架构也不依赖于数据集
+                        </p>
+                    </CardBody>
+                </Card>
+                <Card className="xl:max-w-sm bg-pink-50 rounded-xl shadow-md px-3 w-full">
+                    <CardHeader className="flex gap-3">
+                        <div className="p-3 flex flex-col font-extrabold">
+                            <h1 className="text-xl font-semibold">缺点</h1>
+                        </div>
+                    </CardHeader>
+                    <CardBody className="py-1 overflow-auto" >
+                        <p>
+                            受标记样本分布和数量的限制，很难有效地发现高置信度无标记样本，
+                            虽然目前已有较多半监督自训练算法，但这些算法所使用的基分类器都有自身的弱点，
+                            自训练一般需要有标注样本与无标签样本的性质差异不能太大，
+                            并且需要迭代多次，且几乎所有的发现高置信度无标记样本的方法都需要排序置信度值，
+                            排序过程增加了计算时间，所以计算时间会较长。
+                        </p>
+                    </CardBody>
+                </Card>
+                <Card className="xl:max-w-sm bg-pink-50 rounded-xl shadow-md px-3 w-full">
+                    <CardHeader className="flex gap-3">
+                        <div className="p-3 flex flex-col font-extrabold">
+                            <h1 className="text-xl font-semibold">半监督学习</h1>
+                        </div>
+                    </CardHeader>
+                    <CardBody className="py-1 overflow-auto" >
+                        <p>
+                            机器学习算法通常分为监督学习和无监督学习两大类。
+                            监督学习算法需要训练数据集中包含标记的输入输出对，
+                            而无监督学习算法则是在没有任何标签信息的情况下寻找数据中的内在结构和模式。
+                        </p>
+                        <img src="/algorithm-introduce/knn5.png" alt="description" />
+                        <p>
+                            半监督学习是介于这两种学习方式之间的一种新兴的机器学习范式。
+                            它利用少量标记数据和大量无标记数据来训练模型，
+                            相比完全监督学习能够取得更好的性能。
+                            现实世界中获取尿技术局往往需要大量的人工标注工作，
+                            代价极高半监督学习在很多实际应用中都有广泛应用，
+                            比如图像分类、自然语言处理、生物信息学等领域。
+                        </p>
+                        <p>
+                            其中，k-近邻算法是一种简单有效的半监督学习方法。
+                            KNN算法的核心思想是利用训练集中与待预测样本最相似的k个样本的信息来预测该样本的类别。
+                        </p>
+                    </CardBody>
+                </Card>
+                <Card className="xl:max-w-sm bg-pink-50 rounded-xl shadow-md px-3 w-full">
+                    <CardHeader className="flex gap-3">
+                        <div className="p-3 flex flex-col font-extrabold">
+                            <h1 className="text-xl font-semibold">基于传播的半监KNN</h1>
+                        </div>
+                    </CardHeader>
+                    <CardBody className="py-1 overflow-auto" >
+                        <p>
+                            算法使用已标记的样本来传播标签给未标记的样本。
+                            算法首先构建一个图，其中节点代表数据点，边代表样本之间的相似性，
+                            通过图的传播规则（如label propagation）或优化问题，
+                            标签可以从已标记的节点传播到未标记的节点。
+                            这种方法适用于标签传播成本较低，
+                            即判断两个样本是否属于同一类别较为简单的情况。
+                        </p>
+                        
+                    </CardBody>
+                </Card>
+                <Card className="xl:max-w-sm bg-pink-50 rounded-xl shadow-md px-3 w-full">
+                    <CardHeader className="flex gap-3">
+                        <div className="p-3 flex flex-col font-extrabold">
+                            <h1 className="text-xl font-semibold">基于聚类的半监督KNN</h1>
+                        </div>
+                    </CardHeader>
+                    <CardBody className="py-1 overflow-auto" >
+                        <p>
+                            算法首先对未标记的样本进行聚类。每个聚类中心代表该类未标记样本的平均标签。
+                            然后，算法使用已标记的样本来为这些聚类中心“投票”，从而为每个聚类分配一个标签，
+                            最终使用这些聚类标签来预测未标记样本的类别。
+                            这种方法适用于聚类中心能够很好地代表未标记样本的情况。
+                        </p>
+                    </CardBody>
+                </Card>
+                <Card className="xl:max-w-sm bg-pink-50 rounded-xl shadow-md px-3 w-full">
+                    <CardHeader className="flex gap-3">
+                        <div className="p-3 flex flex-col font-extrabold">
+                            <h1 className="text-xl font-semibold">KNN_SSAL</h1>
+                        </div>
+                    </CardHeader>
+                    <CardBody className="py-1 overflow-auto" >
+                        <p>
+                            采用结合了自训练和半监督学习的KNN模型。
+                        </p>
+                        <p>
+                            它首先使用有标签数据训练模型，
+                            然后通过迭代的方式选择高置信度的无标签数据进行标注，
+                            并将这些新标注的数据加入到有标签数据集中。
                         </p>
                     </CardBody>
                 </Card>

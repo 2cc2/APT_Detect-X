@@ -43,7 +43,7 @@ const Docs = () => {
     return (
         <div className="flex" style={{ height: 'calc(100vh - 60px)' }}>
             <div className='bg-white dark:bg-zinc-800 p-4 rounded-lg shadow-md' style={{ flex: 1 }}>
-                <h2
+                {/* <h2
                     className="text-3xl font-bold mb-7 text-black"
                     onClick={() => {
                         setSelectedTag(null)
@@ -51,7 +51,7 @@ const Docs = () => {
                     style={{ cursor: 'pointer' }}
                 >
                     算法选择
-                </h2>
+                </h2> */}
                 <Menu
                     selectedKeys={selectedTag ? [selectedTag] : []}
                     mode="inline"

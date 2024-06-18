@@ -19,13 +19,13 @@ const Docs = () => {
     return (
         <div className="flex" style={{ height: 'calc(100vh - 60px)' }}>
             <div className='bg-white dark:bg-zinc-800 p-4 rounded-lg shadow-md' style={{ flex: 1 }}>
-                <h2
+                {/* <h2
                     className="text-3xl font-bold mb-7 text-black"
                     onClick={() => setSelectedTags(null)}
                     style={{ cursor: 'pointer' }}
                 >
                     评估分类
-                </h2>
+                </h2> */}
                 <Menu
                     selectedKeys={selectedTags ? [selectedTags] : []}
                     mode="vertical"

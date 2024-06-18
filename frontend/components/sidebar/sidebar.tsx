@@ -81,7 +81,7 @@ export const SidebarWrapper = () => {
           />
           <SidebarItem
             isActive={pathname === "/DataFusion"}
-            title="Data Fusion"
+            title="DataFusion"
             icon={<ChangeLogIcon />}
             href="DataFusion"
           />
