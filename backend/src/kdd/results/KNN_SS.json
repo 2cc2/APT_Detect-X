@@ -1,0 +1,46 @@
+{
+    "Cross-validation scores": [
+        0.85757869,
+        0.92878935,
+        0.93757869,
+        0.89878788,
+        0.79333333
+    ],
+    "Average cross-validation score": 0.9932135886712159,
+    "StratifiedKFold cross-validation scores": [
+        0.8339271255060729,
+        0.8659514170040485,
+        0.8979757085020243,
+        0.9459514170040485,
+        0.9479757085020243
+    ],
+    "Average score": 0.9963562753036437,
+    "Accuracy": 0.9676957677366592,
+    "Classification Report": {
+        "0": {
+            "precision": 0.95,
+            "recall": 0.97,
+            "f1-score": 0.96,
+            "support": 960
+        },
+        "1": {
+            "precision": 0.99,
+            "recall": 0.99,
+            "f1-score": 0.99,
+            "support": 3931
+        },
+        "accuracy": 0.9838478838683296,
+        "macro avg": {
+            "precision": 0.97,
+            "recall": 0.98,
+            "f1-score": 0.97,
+            "support": 4891
+        },
+        "weighted avg": {
+            "precision": 0.98,
+            "recall": 0.98,
+            "f1-score": 0.98,
+            "support": 4891
+        }
+    }
+}

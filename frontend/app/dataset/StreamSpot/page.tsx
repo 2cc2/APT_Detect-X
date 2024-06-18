@@ -1,0 +1,126 @@
+import { Tabs } from 'antd';
+import React, { useEffect, useState } from 'react';
+import Papa from 'papaparse';
+import 'github-markdown-css/github-markdown.css';
+import Markdown from '@/components/markdown/Markdown';
+
+const { TabPane } = Tabs;
+
+export const Introduce = () => {
+    const [markdown, setMarkdown] = useState('');
+
+    useEffect(() => {
+        fetch('/DataProcessing/StreamSpot/introduce.md')
+            .then(response => response.text())
+            .then(data => {
+                setMarkdown(data);
+            });
+    }, []);
+
+    return (
+        <div >
+            <Markdown content={markdown} />
+        </div>
+    );
+};
+
+export const Feature = () => {
+    const [data, setData] = useState<Array<{ [key: string]: string }>>([]);
+
+    useEffect(() => {
+        fetch('/DataProcessing/StreamSpot/StreamSpot.tsv')//http://localhost:5001/data/csvdata
+            .then(response => response.text())
+            .then(tsvData => {
+                const parsedData = Papa.parse(tsvData, { header: true, delimiter: "\t" }).data as Array<{ [key: string]: string }>;
+                setData(parsedData);
+            });
+    }, []);
+
+    return (
+        <div style={{ height: 'calc(100vh - 215px)', maxWidth: 'calc(100vh + 300px)', overflow: 'auto' }}>
+            <table style={{ backgroundColor: 'white', borderCollapse: 'collapse', tableLayout: 'fixed', maxWidth: '100%' }}>
+                <thead>
+                    <tr>
+                        {data[0] && Object.keys(data[0]).map((key, index) => (
+                            <th key={index} style={{ border: '1px solid black', padding: '8px', textAlign: 'left' }}>{key}</th>
+                        ))}
+                    </tr>
+                </thead>
+                <tbody>
+                    {data.map((row, index) => (
+                        <tr key={index}>
+                            {Object.entries(row).map(([key, value], i) => (
+                                <td key={i} style={{
+                                    border: '1px solid black',
+                                    padding: '8px',
+                                    textAlign: 'left'
+                                }}>
+                                    {value}
+                                </td>
+                            ))}
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
+};
+
+export const CSVDataGrid = () => {
+    const [data, setData] = useState<Array<{ [key: string]: string }>>([]);
+
+    useEffect(() => {
+        fetch('/DataProcessing/StreamSpot/StreamSpot.tsv')//http://localhost:5001/data/csvdata
+            .then(response => response.text())
+            .then(tsvData => {
+                const parsedData = Papa.parse(tsvData, { header: true, delimiter: "\t" }).data as Array<{ [key: string]: string }>;
+                setData(parsedData);
+            });
+    }, []);
+
+    return (
+        <div style={{ height: 'calc(100vh - 215px)', maxWidth: 'calc(100vh + 300px)', overflow: 'auto' }}>
+            <table style={{ backgroundColor: 'white', borderCollapse: 'collapse', tableLayout: 'fixed', maxWidth: '100%' }}>
+                <thead>
+                    <tr>
+                        {data[0] && Object.keys(data[0]).map((key, index) => (
+                            <th key={index} style={{ border: '1px solid black', padding: '8px', textAlign: 'left' }}>{key}</th>
+                        ))}
+                    </tr>
+                </thead>
+                <tbody>
+                    {data.map((row, index) => (
+                        <tr key={index}>
+                            {Object.entries(row).map(([key, value], i) => (
+                                <td key={i} style={{
+                                    border: '1px solid black',
+                                    padding: '8px',
+                                    textAlign: 'left'
+                                }}>
+                                    {value}
+                                </td>
+                            ))}
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
+};
+
+export const StreamSpot = () => {
+
+    return (
+        <Tabs defaultActiveKey="1">
+            <TabPane tab={<span className="text-gray-800 font-bold text-lg">数据介绍</span>} key="1">
+                <Introduce />
+            </TabPane>
+            <TabPane tab={<span className="text-gray-800 font-bold text-lg">特征描述</span>} key="2">
+                <Feature />
+            </TabPane>
+            <TabPane tab={<span className="text-gray-800 font-bold text-lg">数据样本</span>} key="3">
+                <CSVDataGrid />
+            </TabPane>
+        </Tabs>
+    );
+};

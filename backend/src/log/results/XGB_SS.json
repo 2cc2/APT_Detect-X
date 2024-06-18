@@ -1,0 +1,17 @@
+{
+    "Classification Report": {
+        "accuracy": 0.96,
+        "macro avg": {
+            "precision": 0.48,
+            "recall": 0.50,
+            "f1-score": 0.49,
+            "support": 7147
+        },
+        "weighted avg": {
+            "precision": 0.92,
+            "recall": 0.96,
+            "f1-score": 0.94,
+            "support": 7147
+        }
+    }
+}

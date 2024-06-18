@@ -1,0 +1,23 @@
+# Use Python 3.8.10 base image
+FROM python:3.8.10
+
+# Set the working directory in the container
+WORKDIR /backend
+
+# Copy the dependencies file to the working directory
+COPY requirements.txt .
+
+# Install any needed packages specified in requirements.txt
+RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --no-cache-dir -r requirements.txt
+
+# Install Python 3 kernel
+RUN python -m ipykernel install --user
+
+# Copy the current directory contents into the container at /app
+# COPY ./src /backend/src
+
+# Make port 5001 available to the world outside this container
+EXPOSE 5001
+
+# Run the application and Jupyter Kernel Gateway
+CMD ["sh", "-c", "jupyter kernelgateway --KernelGatewayApp.ip=0.0.0.0 --KernelGatewayApp.port=8888 & python src/app.py"]
