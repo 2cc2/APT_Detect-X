@@ -12,7 +12,7 @@ export const CardBalance6 = () => {
                     </span>
                 </div>
             </CardHeader>
-            <CardBody className="py-1">
+            <CardBody className="py-1" style={{ maxHeight: '150px' }}>
                 <p>
                     黄金雕组织的活动主要影响中亚地区，大部分集中在哈萨克斯坦国境内，攻击目标涉及教育行业、政府机关人员、科研人员、媒体工作人员、部分商务工业、军方人员、宗教人员、政府异见人士和外交人员等。该组织使用社会工程学、物理接触、无线电监听等方式进行网络攻击，同时也采购了HackingTeam、NSO Group等网络军火商的武器，具备0day漏洞的高级入侵能力。360参照中亚地区擅长驯养猎鹰进行狩猎的习俗特性，将该组织命名为黄金雕（APT-C-34）。
                 </p>

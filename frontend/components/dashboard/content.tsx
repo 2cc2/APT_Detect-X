@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-import dynamic from "next/dynamic";
-import { CardAgents } from "./card-agents";
-import { CardTransactions } from "./card-transactions";
-import { Link } from "@nextui-org/react";
-import NextLink from "next/link";
-import { TableWrapper } from "../table/table";
+// import dynamic from "next/dynamic";
+// import { CardAgents } from "./card-agents";
+// import { CardTransactions } from "./card-transactions";
+// import { Link } from "@nextui-org/react";
+// import NextLink from "next/link";
+// import { TableWrapper } from "../table/table";
 import { CardBalance1 } from "./card-balance1";
 import { CardBalance2 } from "./card-balance2";
 import { CardBalance3 } from "./card-balance3";
@@ -16,6 +16,8 @@ import { CardBalance7 } from "./card-balance7";
 import { CardBalance8 } from "./card-balance8";
 import { CardBalance9 } from "./card-balance9";
 import { CardBalance10 } from "./card-balance10";
+import { CardBalance11 } from "./card-balance11";
+import { CardBalance12 } from "./card-balance12";
 
 // const Chart = dynamic(
 //   () => import("../charts/steam").then((mod) => mod.Steam),
@@ -29,18 +31,22 @@ export const Content = () => (
   <div className="h-full lg:px-6">
     <div className="flex justify-center gap-4 xl:gap-6 pt-3 px-4 lg:px-0  flex-wrap xl:flex-nowrap sm:pt-10 max-w-[90rem] mx-auto w-full">
       <div className="mt-6 gap-6 flex flex-col w-full">
-        <h1 className="text-xl font-semibold">发现APT组织</h1>
+        <h1 className="text-xl font-semibold">APT组织</h1>
         {/* Card Section Top */}
         <div className="flex flex-col gap-2"> 
-          <div className="grid md:grid-cols-2 grid-cols-1 2xl:grid-cols-3 gap-5  w-full">
+          <div className="grid md:grid-cols-2 grid-cols-1 2xl:grid-cols-4 gap-5  w-full">
             <CardBalance1 />
             <CardBalance2 />
             <CardBalance3 />
-            
+            <CardBalance4 />
+            <CardBalance5 />
+            <CardBalance6 />
             <CardBalance7 />
             <CardBalance8 />
             <CardBalance9 />
             <CardBalance10 />
+            <CardBalance11 />
+            <CardBalance12 />
           </div>
         </div>
 
@@ -54,14 +60,6 @@ export const Content = () => (
       </div>
 
       {/* Left Section */}
-      <div className="mt-4 gap-2 flex flex-col xl:max-w-md w-full">
-        {/* <h3 className="text-xl font-semibold">Section</h3> */}
-        <div className="flex flex-col justify-center gap-4 flex-wrap md:flex-nowrap md:flex-col">
-          <CardBalance4 />
-          <CardBalance5 />
-          <CardBalance6 />
-        </div>
-      </div>
     </div>
 
     {/* Table Latest Users */}

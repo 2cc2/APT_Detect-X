@@ -12,7 +12,7 @@ export const CardBalance10 = () => {
                     </span>
                 </div>
             </CardHeader>
-            <CardBody className="py-1 overflow-auto" style={{ maxHeight: '100px' }}>
+            <CardBody className="py-1 overflow-auto" style={{ maxHeight: '150px' }}>
                 <p>
                     2016年7月，360发现一起针对伊朗Android手机用户长达两年之久的APT攻击活动。攻击者借助社交软件Telegram分享经过伪装的ArmaRat木马，入侵成功后攻击者可以完全控制用户手机，并对用户手机进行实时监控。由于该木马演变过程中C&C及代码结构均出现“arma”关键字，所以我们将该组织命名为“ArmaRat”。
                 </p>

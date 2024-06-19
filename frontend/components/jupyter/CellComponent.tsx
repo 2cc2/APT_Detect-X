@@ -15,7 +15,7 @@ export const CellComponent = (props: CellComponentProps) => {
       <Jupyter
         jupyterServerHttpUrl="https://oss.datalayer.run/api/jupyter-server"
         jupyterServerWsUrl="wss://oss.datalayer.run/api/jupyter-server"
-        jupyterToken="b5c3b5dca09e8ee68093e24d259347c88ecd893baa3413b7"
+        jupyterToken="d41683474efda7dde9698075e1183f50fdd0bbad3c0a3314"
         colorMode={colorMode}
         theme={theme}
       >

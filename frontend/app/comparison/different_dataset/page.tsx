@@ -1,6 +1,12 @@
+'use client';
 import React, { useEffect, useState } from 'react'
 import EChartComponent from '@/components/echart/MyEchart';
-import { Select } from 'antd';
+import { Breadcrumb, Select } from 'antd';
+import { HorizontalNav } from '@/components/footer&hernav/hernav';
+import { SidebarWrapper } from '@/components/sidebar/sidebar';
+import { HomeOutlined } from '@ant-design/icons';
+import { Footer } from '@/components/footer&hernav/Footer';
+import Loading from '@/components/loading/loading';
 
 const { Option } = Select;
 
@@ -52,11 +58,11 @@ const Comparison_dataset = () => {
                 }
 
                 // 处理数据，为每个部分添加标签
-                const processedData1 = data1.map((d:any) => ({
+                const processedData1 = data1.map((d: any) => ({
                     ...d,
                     label: 'KDD'
                 }));
-                const processedData2 = data2.map((d:any) => ({
+                const processedData2 = data2.map((d: any) => ({
                     ...d,
                     label: 'LOG'
                 }));
@@ -163,7 +169,7 @@ const Comparison_dataset = () => {
                     }
                 },
                 legend: {
-                    data: ['Precision', 'Recall', 'F1-score'],
+                    data: ['KDD', 'LOG'],
                     orient: 'horizontal',
                     left: 'center',
                     bottom: 0
@@ -173,26 +179,26 @@ const Comparison_dataset = () => {
                 },
                 yAxis: {
                     type: 'category',
-                    data: [selectedOption.replace('.json', '')]
+                    data: ['Precision', 'Recall', 'F1-score']
                 },
                 series: [
                     {
-                        name: 'Precision',
+                        name: 'KDD',
                         type: 'bar',
-                        stack: 'total',
-                        data: data.map(d => d['Classification Report']?.['weighted avg']?.['precision'])
+                        data: [
+                            data[0]['Classification Report']?.['weighted avg']?.['precision'],
+                            data[0]['Classification Report']?.['weighted avg']?.['recall'],
+                            data[0]['Classification Report']?.['weighted avg']?.['f1-score']
+                        ]
                     },
                     {
-                        name: 'Recall',
+                        name: 'LOG',
                         type: 'bar',
-                        stack: 'total',
-                        data: data.map(d => d['Classification Report']?.['weighted avg']?.['recall'])
-                    },
-                    {
-                        name: 'F1-score',
-                        type: 'bar',
-                        stack: 'total',
-                        data: data.map(d => d['Classification Report']?.['weighted avg']?.['f1-score'])
+                        data: [
+                            data[1]['Classification Report']?.['weighted avg']?.['precision'],
+                            data[1]['Classification Report']?.['weighted avg']?.['recall'],
+                            data[1]['Classification Report']?.['weighted avg']?.['f1-score']
+                        ]
                     }
                 ]
             };
@@ -218,4 +224,78 @@ const Comparison_dataset = () => {
     );
 };
 
-export default Comparison_dataset;
+const Layout = ({ children }: any) => (
+    <div>
+        <div style={{ flex: '1 0 auto' }}>
+            <HorizontalNav />
+        </div>
+        <div className="flex">
+            <SidebarWrapper />
+            <div className="flex-grow">
+                {children}
+            </div>
+        </div>
+    </div>
+);
+
+const TopNavbar = ({ setCurrentPage }: any) => {
+    return (
+        <div className="flex justify-between p-2 bg-gray-600" >
+            <Breadcrumb className="breadcrumb-white">
+                <Breadcrumb.Item>
+                    <a href="/dashboard" style={{ color: 'white' }}>
+                        <HomeOutlined />
+                        <span>首页</span>
+                    </a>
+                </Breadcrumb.Item>
+                <Breadcrumb.Item>
+                    <a href="/dataset" onClick={() => setCurrentPage('dataset')} style={{ color: 'white' }}>
+                        数据集
+                    </a>
+                </Breadcrumb.Item>
+                <Breadcrumb.Item>
+                    <a href="/algorithm" onClick={() => setCurrentPage('algorithm')} style={{ color: 'white' }}>
+                        检测算法
+                    </a>
+                </Breadcrumb.Item>
+                <Breadcrumb.Item>
+                    <a href="/comparison" onClick={() => setCurrentPage('comparison')} style={{ color: 'white' }}>
+                        评估对比
+                    </a>
+                </Breadcrumb.Item>
+            </Breadcrumb>
+        </div>
+    );
+};
+
+const Comparison_Data = () => {
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        // 模拟数据加载过程
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 1500); // 假设数据加载需要1.5秒
+        // 清理定时器
+        return () => clearTimeout(timer);
+    }, []);
+
+    return (
+        <>
+            {loading ? (
+                <Loading />
+            ) : (
+                <Layout>
+                    <div>
+                        <TopNavbar />
+                        <Comparison_dataset />
+                    </div>
+                    <div style={{ position: 'fixed', bottom: 0, width: '100%' }}>
+                        <Footer />
+                    </div>
+                </Layout>
+            )}
+        </>
+    );
+};
+
+export default Comparison_Data;

@@ -30,25 +30,25 @@ export const Code = () => {
     );
 };
 
-const NotebookComponentNoSSR = dynamic(
-    () => import('../../../components/jupyter/NotebookComponent'),
-    { ssr: false }
-);
+// const NotebookComponentNoSSR = dynamic(
+//     () => import('../../../components/jupyter/NotebookComponent'),
+//     { ssr: false }
+// );
 
-const CellComponentNoSSR = dynamic(
-    () => import('../../../components/jupyter/CellComponent'),
-    { ssr: false }
-);
+// const CellComponentNoSSR = dynamic(
+//     () => import('../../../components/jupyter/CellComponent'),
+//     { ssr: false }
+// );
 
-const JupyterDemo = () => {
-    const [theme, setTheme] = useState<Theme>(primerTheme); // 使用primerTheme作为初始主题
-    return (
-        <>
-            <NotebookComponentNoSSR colorMode={'light'} theme={theme} />
-            <CellComponentNoSSR colorMode={'light'} theme={theme} />
-        </>
-    )
-}
+// const JupyterDemo = () => {
+//     const [theme, setTheme] = useState<Theme>(primerTheme); // 使用primerTheme作为初始主题
+//     return (
+//         <>
+//             <NotebookComponentNoSSR colorMode={'light'} theme={theme} />
+//             <CellComponentNoSSR colorMode={'light'} theme={theme} />
+//         </>
+//     )
+// }
 
 export const KNN_AL = () => {
     return (

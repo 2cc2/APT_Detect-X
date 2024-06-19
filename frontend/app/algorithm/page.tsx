@@ -94,7 +94,7 @@ const Layout = ({ children }: any) => (
 
 const TopNavbar = ({ setCurrentPage }: any) => {
     return (
-        <div className="flex justify-between p-4 bg-gray-300 text-white" >
+        <div className="flex justify-between p-2 bg-gray-600" >
             <Breadcrumb className="breadcrumb-white">
                 <Breadcrumb.Item>
                     <a href="/dashboard" style={{ color: 'white' }}>

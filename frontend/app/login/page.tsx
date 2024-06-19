@@ -64,38 +64,38 @@ const Page = () => {
         >
             <LoginFormPage
                 backgroundImageUrl="https://mdn.alipayobjects.com/huamei_gcee1x/afts/img/A*y0ZTS6WLwvgAAAAAAAAAAAAADml6AQ/fmt.webp"
-                logo="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
+                logo="https://img.icons8.com/nolan/64/paper-plane.png"
                 backgroundVideoUrl="https://gw.alipayobjects.com/v/huamei_gcee1x/afts/video/jXRBRK_VAwoAAAAAAAAAAAAAK4eUAQBr"
-                title="Github"
+                title="APT DetectX"
                 containerStyle={{
                     backgroundColor: 'rgba(0, 0, 0,0.65)',
                     backdropFilter: 'blur(4px)',
                 }}
-                subTitle="全球最大的代码托管平台"
-                activityConfig={{
-                    style: {
-                        boxShadow: '0px 0px 8px rgba(0, 0, 0, 0.2)',
-                        color: token.colorTextHeading,
-                        borderRadius: 8,
-                        backgroundColor: 'rgba(255,255,255,0.25)',
-                        backdropFilter: 'blur(4px)',
-                    },
-                    title: '活动标题，可配置图片',
-                    subTitle: '活动介绍说明文字',
-                    action: (
-                        <Button
-                            size="large"
-                            style={{
-                                borderRadius: 20,
-                                background: token.colorBgElevated,
-                                color: token.colorPrimary,
-                                width: 120,
-                            }}
-                        >
-                            去看看
-                        </Button>
-                    ),
-                }}
+                subTitle="APT检测算法开发辅助平台"
+                // activityConfig={{
+                //     style: {
+                //         boxShadow: '0px 0px 8px rgba(0, 0, 0, 0.2)',
+                //         color: token.colorTextHeading,
+                //         borderRadius: 8,
+                //         backgroundColor: 'rgba(255,255,255,0.25)',
+                //         backdropFilter: 'blur(4px)',
+                //     },
+                //     title: '活动标题，可配置图片',
+                //     subTitle: '活动介绍说明文字',
+                //     action: (
+                //         <Button
+                //             size="large"
+                //             style={{
+                //                 borderRadius: 20,
+                //                 background: token.colorBgElevated,
+                //                 color: token.colorPrimary,
+                //                 width: 120,
+                //             }}
+                //         >
+                //             去看看
+                //         </Button>
+                //     ),
+                // }}
                 onFinish={handleSubmit}
                 actions={
                     <div

@@ -12,7 +12,7 @@ export const CardBalance12 = () => {
                     </span>
                 </div>
             </CardHeader>
-            <CardBody className="py-1">
+            <CardBody className="py-1 overflow-auto" style={{ maxHeight: '150px' }}>
                 <p>
                     从2011年开始持续至今，高级攻击组织蓝宝菇（APT-C-12）对我国政府、军工、科研、金融等重点单位和部门进行了持续的网络间谍活动。该组织主要关注核工业和科研等相关信息。被攻击目标主要集中在中国大陆境内。
                 </p>

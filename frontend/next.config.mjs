@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: false,
+    images: {
+        domains: ['cdn.jsdelivr.net', 'img.icons8.com'],
+    },
     webpack: (config, options) => {
         config.module.rules.push(
             { test: /\.js.map$/, type: 'asset/resource' },
