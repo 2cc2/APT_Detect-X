@@ -97,7 +97,7 @@ export const Log = () => {
             <TabPane tab={<span className="text-gray-800 font-bold text-lg">数据介绍</span>} key="1">
                 <Introduce />
             </TabPane>
-            <TabPane tab={<span className="text-gray-800 font-bold text-lg">特征描述</span>} key="2">
+            <TabPane tab={<span className="text-gray-800 font-bold text-lg">HDFS数据集</span>} key="2">
                 <Feature />
             </TabPane>
             <TabPane tab={<span className="text-gray-800 font-bold text-lg">数据样本</span>} key="3">
@@ -133,7 +133,7 @@ const TopNavbar = ({ setCurrentPage }: any) => {
                     </a>
                 </Breadcrumb.Item>
                 <Breadcrumb.Item>
-                    <a href="/dataset" onClick={() => setCurrentPage('dataset')} style={{ color: 'white' }}>
+                    <a href="/dataset/KDD" onClick={() => setCurrentPage('dataset')} style={{ color: 'white' }}>
                         数据集
                     </a>
                 </Breadcrumb.Item>

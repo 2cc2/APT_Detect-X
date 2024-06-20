@@ -14,20 +14,20 @@ import TweenOne from 'rc-tween-one';
 export const Content = () => {
   return (
     <div className="relative bg-white overflow-hidden">
-      <TweenOne animation={{ opacity: 1, duration: 3000 }} style={{ opacity: 0 }}>
+      <TweenOne animation={{ opacity: 1, duration: 1000 }} style={{ opacity: 0 }}>
         <Hero />
       </TweenOne>
-      <TweenOne animation={{ opacity: 1, duration: 6000 }} style={{ opacity: 0 }}>
+      <TweenOne animation={{ opacity: 1, duration: 2500 }} style={{ opacity: 0 }}>
         <Product />
       </TweenOne>
-      <TweenOne animation={{ opacity: 1, duration: 9000 }} style={{ opacity: 0 }}>
+      <TweenOne animation={{ opacity: 1, duration: 4000 }} style={{ opacity: 0 }}>
         <Features />
       </TweenOne>
       {/* <Statistics /> */}
-      <TweenOne animation={{ opacity: 1, duration: 12000 }} style={{ opacity: 0 }}>
+      <TweenOne animation={{ opacity: 1, duration: 5500 }} style={{ opacity: 0 }}>
         <Testimonials />
       </TweenOne>
-      <TweenOne animation={{ opacity: 1, duration: 15000 }} style={{ opacity: 0 }}>
+      <TweenOne animation={{ opacity: 1, duration: 7000 }} style={{ opacity: 0 }}>
         <CTA />
       </TweenOne>
       {/* <Footer /> */}

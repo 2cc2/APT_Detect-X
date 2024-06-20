@@ -7,10 +7,10 @@ import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
-  { name: "数据集", href: "/dataset" },
-  { name: "算法", href: "/algorithm" },
-  { name: "算法评估", href: "/comparison" },
-  { name: "数据融合", href: "/DataFusion" },
+  { name: "数据集", href: "/dataset/KDD" },
+  { name: "算法", href: "/algorithm/KNN" },
+  { name: "算法评估", href: "/comparison/different_algorithm" },
+  { name: "数据融合", href: "/DataFusion/att_ck" },
 ];
 
 export default function Hero() {
@@ -38,10 +38,6 @@ export default function Hero() {
                   <div className="flex items-center justify-between w-full md:w-auto">
                     <a href="#">
                       <span className="sr-only">Workflow</span>
-                      {/* <img
-                        className="h-8 w-auto sm:h-10"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                      /> */}
                       <img
                         width="64"
                         height="64"
@@ -70,8 +66,8 @@ export default function Hero() {
                     </a>
                   ))}
                   <a
-                    // href="/login"
-                    href="/dashboard"
+                    href="/login"
+                    // href="/dashboard"
                     className="font-medium text-indigo-600 hover:text-indigo-500"
                   >
                     Log in

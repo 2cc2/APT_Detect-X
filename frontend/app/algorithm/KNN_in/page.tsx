@@ -262,7 +262,7 @@ const TopNavbar = ({ setCurrentPage }: any) => {
                     </a>
                 </Breadcrumb.Item>
                 <Breadcrumb.Item>
-                    <a href="/algorithm" onClick={() => setCurrentPage('algorithm')} style={{ color: 'white' }}>
+                    <a href="/algorithm/KNN" onClick={() => setCurrentPage('algorithm')} style={{ color: 'white' }}>
                         检测算法
                     </a>
                 </Breadcrumb.Item>

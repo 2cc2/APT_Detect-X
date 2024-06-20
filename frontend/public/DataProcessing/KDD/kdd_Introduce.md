@@ -29,16 +29,7 @@
 ![](/DataProcessing/KDD/NSL-KDD.png)
 
 
-<style>
-.center 
-{
-  width: auto;
-  display: table;
-  margin: auto;
-  table-layout: fixed;
-}
-</style>
-<div class="center">
+
 
  标签  |  类别	|  训练集（10%）|	测试集（Corrected）
 -----|-----|-----|-----
@@ -87,5 +78,4 @@
 -|worm	|/|	2
 -|xlock	|/|	9
 -|xsnoop|	/	|4
-<div>
 

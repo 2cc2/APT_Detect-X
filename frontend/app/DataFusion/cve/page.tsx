@@ -48,7 +48,7 @@ export const Fusion = () => {
 };
 
 
-export const Cev = () => {
+export const Cve = () => {
 
     return (
         <Tabs defaultActiveKey="1" className='p-4'>
@@ -87,17 +87,17 @@ const TopNavbar = ({ setCurrentPage }: any) => {
                     </a>
                 </Breadcrumb.Item>
                 <Breadcrumb.Item>
-                    <a href="/dataset" onClick={() => setCurrentPage('dataset')} style={{ color: 'white' }}>
+                    <a href="/dataset/KDD" onClick={() => setCurrentPage('dataset')} style={{ color: 'white' }}>
                         数据集
                     </a>
                 </Breadcrumb.Item>
                 <Breadcrumb.Item>
-                    <a href="/algorithm" onClick={() => setCurrentPage('algorithm')} style={{ color: 'white' }}>
+                    <a href="/algorithm/KNN" onClick={() => setCurrentPage('algorithm')} style={{ color: 'white' }}>
                         检测算法
                     </a>
                 </Breadcrumb.Item>
                 <Breadcrumb.Item>
-                    <a href="/comparison" onClick={() => setCurrentPage('comparison')} style={{ color: 'white' }}>
+                    <a href="/comparison/different_algorithm" onClick={() => setCurrentPage('comparison')} style={{ color: 'white' }}>
                         评估对比
                     </a>
                 </Breadcrumb.Item>
@@ -106,7 +106,7 @@ const TopNavbar = ({ setCurrentPage }: any) => {
     );
 };
 
-const DataFusion_cev = () => {
+const DataFusion_cve = () => {
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         // 模拟数据加载过程
@@ -125,7 +125,7 @@ const DataFusion_cev = () => {
                 <Layout>
                     <div>
                         <TopNavbar />
-                        <Cev />
+                        <Cve />
                     </div>
                     <div style={{ position: 'fixed', bottom: 0, width: '100%' }}>
                         <Footer />
@@ -136,4 +136,4 @@ const DataFusion_cev = () => {
     );
 };
 
-export default DataFusion_cev;
+export default DataFusion_cve;

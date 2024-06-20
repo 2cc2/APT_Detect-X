@@ -232,17 +232,17 @@ const TopNavbar = ({ setCurrentPage }: any) => {
                     </a>
                 </Breadcrumb.Item>
                 <Breadcrumb.Item>
-                    <a href="/dataset" onClick={() => setCurrentPage('dataset')} style={{ color: 'white' }}>
+                    <a href="/dataset/KDD" onClick={() => setCurrentPage('dataset')} style={{ color: 'white' }}>
                         数据集
                     </a>
                 </Breadcrumb.Item>
                 <Breadcrumb.Item>
-                    <a href="/algorithm" onClick={() => setCurrentPage('algorithm')} style={{ color: 'white' }}>
+                    <a href="/algorithm/KNN" onClick={() => setCurrentPage('algorithm')} style={{ color: 'white' }}>
                         检测算法
                     </a>
                 </Breadcrumb.Item>
                 <Breadcrumb.Item>
-                    <a href="/comparison" onClick={() => setCurrentPage('comparison')} style={{ color: 'white' }}>
+                    <a href="/comparison/different_algorithm" onClick={() => setCurrentPage('comparison')} style={{ color: 'white' }}>
                         评估对比
                     </a>
                 </Breadcrumb.Item>

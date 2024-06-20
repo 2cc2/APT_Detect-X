@@ -156,7 +156,7 @@ const TopNavbar = ({ setCurrentPage }: any) => {
                     </a>
                 </Breadcrumb.Item>
                 <Breadcrumb.Item>
-                    <a href="/dataset" onClick={() => setCurrentPage('dataset')} style={{ color: 'white' }}>
+                    <a href="/dataset/KDD" onClick={() => setCurrentPage('dataset')} style={{ color: 'white' }}>
                         数据集
                     </a>
                 </Breadcrumb.Item>

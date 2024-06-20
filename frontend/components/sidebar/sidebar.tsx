@@ -73,8 +73,8 @@ const items: MenuItem[] = [
       {
         key: '19',
         label: (
-          <a href="/DataFusion/cev" rel="noopener noreferrer">
-            cev数据集
+          <a href="/DataFusion/cve" rel="noopener noreferrer">
+            CVE数据集
           </a>
         ),
       },

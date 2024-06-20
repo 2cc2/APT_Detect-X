@@ -34,6 +34,65 @@ export const Introduce_svm = () => {
                         </p>
                     </CardBody>
                 </Card>
+                <Card className="xl:max-w-sm bg-green-50 rounded-xl shadow-md px-3 w-full">
+                    <CardHeader className="flex gap-3">
+                        <div className="p-3 flex flex-col font-extrabold">
+                            <h1 className="text-xl font-semibold">SVM_AL算法</h1>
+                        </div>
+                    </CardHeader>
+                    <CardBody className="py-1 overflow-auto" style={{ maxHeight: '240px' }}>
+                        <p>
+                            实现基于主动学习的支持向量机（SVM）模型。
+                            初始化一个SVM模型，用已标签的数据对模型进行训练。
+                            接下来，进行了主动学习的迭代。在每次迭代中，模型首先检查无标签数据是否为空，
+                            如果为空，则停止迭代。然后，模型使用当前的模型预测无标签数据的概率，
+                            并计算不确定性，这里使用的是预测概率最接近0.5的样本。
+                            然后，选择不确定性最高的样本，并从另一个数据集中获取这些样本的标签。
+                            然后，将这些样本及其标签添加到已标签的数据集中，并从无标签数据集中删除这些样本。
+                            最后，使用新的已标签数据集重新训练模型。
+                        </p>
+                    </CardBody>
+                </Card>
+                <Card className="xl:max-w-sm bg-yellow-50 rounded-xl shadow-md px-3 w-full">
+                    <CardHeader className="flex gap-3">
+                        <div className="p-3 flex flex-col font-extrabold">
+                            <h1 className="text-xl font-semibold">SVM_SS算法</h1>
+                        </div>
+                    </CardHeader>
+                    <CardBody className="py-1 overflow-auto" style={{ maxHeight: '240px' }}>
+                        <p>
+                            实现基于半监督学习的支持向量机（SVM）模型。
+                            初始化一个SVM模型，用已标签的数据对模型进行训练。
+                            接下来，进行了半监督学习的迭代。
+                            在每次迭代中，模型首先使用当前的模型预测无标签数据的概率，并选择出预测概率高于设定阈值的样本。
+                            然后，将这些高置信度的样本及其预测标签添加到已标签的数据集中，
+                            并从无标签数据集中删除这些样本。最后，使用新的已标签数据集重新训练模型。
+                        </p>
+                    </CardBody>
+                </Card>
+                <Card className="xl:max-w-sm bg-red-50 rounded-xl shadow-md px-3 w-full">
+                    <CardHeader className="flex gap-3">
+                        <div className="p-3 flex flex-col font-extrabold">
+                            <h1 className="text-xl font-semibold">SVM_SSAL算法</h1>
+                        </div>
+                    </CardHeader>
+                    <CardBody className="py-1 overflow-auto" style={{ maxHeight: '240px' }}>
+                        <p>
+                            实现基于主动半监督学习的支持向量机（SVM）模型。
+                            初始化一个SVM模型，用已标签的数据对模型进行训练。
+                            接下来，进行了主动学习的迭代。在每次迭代中，
+                            模型首先使用当前的模型预测无标签数据的概率，
+                            并选择出预测概率高于设定阈值的样本，
+                            将这些高置信度的样本及其预测标签添加到已标签的数据集中，
+                            并从无标签数据集中删除这些样本。
+                            然后，模型重新计算无标签样本的预测概率，
+                            并选择出预测概率最低的样本，从另一个数据集中获取这些样本的标签，
+                            将这些低置信度的样本及其标签添加到已标签的数据集中，
+                            并从无标签数据集中删除这些样本。
+                            最后，使用新的已标签数据集重新训练模型。
+                        </p>
+                    </CardBody>
+                </Card>
             </div>
         </div>
     );
@@ -64,12 +123,12 @@ const TopNavbar = ({ setCurrentPage }: any) => {
                     </a>
                 </Breadcrumb.Item>
                 <Breadcrumb.Item>
-                    <a href="/dataset" onClick={() => setCurrentPage('dataset')} style={{ color: 'white' }}>
+                    <a href="/dataset/KDD" onClick={() => setCurrentPage('dataset')} style={{ color: 'white' }}>
                         数据集
                     </a>
                 </Breadcrumb.Item>
                 <Breadcrumb.Item>
-                    <a href="/algorithm" onClick={() => setCurrentPage('algorithm')} style={{ color: 'white' }}>
+                    <a href="/algorithm/KNN" onClick={() => setCurrentPage('algorithm')} style={{ color: 'white' }}>
                         检测算法
                     </a>
                 </Breadcrumb.Item>
