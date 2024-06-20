@@ -1,0 +1,55 @@
+{
+    "id": "bundle--8e7f5b43-0a98-4be0-9894-cc962ade1530",
+    "objects": [
+        {
+            "created": "2024-06-01T20:15:29.497Z",
+            "definition": {
+                "statement": "This information may be distributed without restriction."
+            },
+            "definition_type": "statement",
+            "id": "marking-definition--96f0760d-8b46-4938-911a-3dc42f58da21",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "spec_version": "2.1",
+            "type": "marking-definition"
+        },
+        {
+            "created": "2024-06-01T11:15:29.278Z",
+            "id": "identity--85757248-ba65-4e1b-b40f-19940b029011",
+            "modified": "2024-06-01T11:15:29.278Z",
+            "name": "National Vulnerability Database",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--96f0760d-8b46-4938-911a-3dc42f58da21"
+            ],
+            "spec_version": "2.1",
+            "type": "identity"
+        },
+        {
+            "created": "2024-06-01T11:15:29.278Z",
+            "created_by_ref": "identity--85757248-ba65-4e1b-b40f-19940b029011",
+            "description": "Additional sanitizing was required when opening the equation editor to prevent a stored XSS risk when editing another user's equation.\n\nSOURCE:\n\thttps://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-33997\nPARENT_DESCRIPTION: \nAdditional sanitizing was required when opening the equation editor to prevent a stored XSS risk when editing another user's equation.\n\nTITLE:\n\tCVE-2024-33997",
+            "external_references": [
+                {
+                    "external_id": "CVE-2024-33997",
+                    "source_name": "cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://moodle.org/mod/forum/discuss.php?d=458385"
+                }
+            ],
+            "id": "vulnerability--aa83cdd0-198c-4878-9012-1c9f1fee98da",
+            "modified": "2024-06-01T11:15:29.278Z",
+            "name": "CVE-2024-33997",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--96f0760d-8b46-4938-911a-3dc42f58da21"
+            ],
+            "spec_version": "2.1",
+            "type": "vulnerability"
+        }
+    ],
+    "type": "bundle"
+}

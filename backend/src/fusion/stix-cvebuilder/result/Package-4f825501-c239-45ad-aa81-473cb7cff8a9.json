@@ -1,0 +1,67 @@
+{
+    "id": "bundle--4f825501-c239-45ad-aa81-473cb7cff8a9",
+    "objects": [
+        {
+            "created": "2024-06-01T20:15:26.223Z",
+            "definition": {
+                "statement": "This information may be distributed without restriction."
+            },
+            "definition_type": "statement",
+            "id": "marking-definition--39f1705a-19cd-40ac-b958-b625e2ef4418",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "spec_version": "2.1",
+            "type": "marking-definition"
+        },
+        {
+            "created": "2024-06-01T11:15:25.998Z",
+            "id": "identity--a723e90d-e0cd-4d99-8024-d5037839929a",
+            "modified": "2024-06-01T11:15:25.998Z",
+            "name": "National Vulnerability Database",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--39f1705a-19cd-40ac-b958-b625e2ef4418"
+            ],
+            "spec_version": "2.1",
+            "type": "identity"
+        },
+        {
+            "created": "2024-06-01T11:15:25.998Z",
+            "created_by_ref": "identity--a723e90d-e0cd-4d99-8024-d5037839929a",
+            "description": "The snapctl component within snapd allows a confined snap to interact with the snapd daemon to take certain privileged actions on behalf of the snap. It was found that snapctl did not properly parse command-line arguments, allowing an unprivileged user to trigger an authorised action on behalf of the snap that would normally require administrator privileges to perform. This could possibly allow an unprivileged user to perform a denial of service or similar.\n\nSOURCE:\n\thttps://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-5138\nPARENT_DESCRIPTION: \nThe snapctl component within snapd allows a confined snap to interact with the snapd daemon to take certain privileged actions on behalf of the snap. It was found that snapctl did not properly parse command-line arguments, allowing an unprivileged user to trigger an authorised action on behalf of the snap that would normally require administrator privileges to perform. This could possibly allow an unprivileged user to perform a denial of service or similar.\n\nTITLE:\n\tCVE-2024-5138",
+            "external_references": [
+                {
+                    "external_id": "CVE-2024-5138",
+                    "source_name": "cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://github.com/snapcore/snapd/commit/68ee9c6aa916ab87dbfd9a26030690f2cabf1e14"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://bugs.launchpad.net/snapd/+bug/2065077"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://www.cve.org/CVERecord?id=CVE-2024-5138"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://github.com/snapcore/snapd/security/advisories/GHSA-p9v8-q5m4-pf46"
+                }
+            ],
+            "id": "vulnerability--7b3bb5a7-a732-491a-a7ac-d2c70e50a033",
+            "modified": "2024-06-01T11:15:25.998Z",
+            "name": "CVE-2024-5138",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--39f1705a-19cd-40ac-b958-b625e2ef4418"
+            ],
+            "spec_version": "2.1",
+            "type": "vulnerability"
+        }
+    ],
+    "type": "bundle"
+}

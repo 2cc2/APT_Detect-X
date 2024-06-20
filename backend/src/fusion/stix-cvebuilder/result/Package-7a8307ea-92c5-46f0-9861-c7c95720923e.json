@@ -1,0 +1,59 @@
+{
+    "id": "bundle--7a8307ea-92c5-46f0-9861-c7c95720923e",
+    "objects": [
+        {
+            "created": "2024-06-01T20:15:05.623Z",
+            "definition": {
+                "statement": "This information may be distributed without restriction."
+            },
+            "definition_type": "statement",
+            "id": "marking-definition--942e9743-99ef-4e30-b7e7-04940adeee73",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "spec_version": "2.1",
+            "type": "marking-definition"
+        },
+        {
+            "created": "2024-06-01T11:15:05.371Z",
+            "id": "identity--fa981139-b045-4039-b5f1-1fda0e0cc009",
+            "modified": "2024-06-01T11:15:05.371Z",
+            "name": "National Vulnerability Database",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--942e9743-99ef-4e30-b7e7-04940adeee73"
+            ],
+            "spec_version": "2.1",
+            "type": "identity"
+        },
+        {
+            "created": "2024-06-01T11:15:05.371Z",
+            "created_by_ref": "identity--fa981139-b045-4039-b5f1-1fda0e0cc009",
+            "description": "The Contact Form Manager plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's [xyz-cfm-form] shortcode in all versions up to, and including, 1.6.1 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers with contributor-level and above permissions to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.\n\nSOURCE:\n\thttps://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-2295\nPARENT_DESCRIPTION: \nThe Contact Form Manager plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's [xyz-cfm-form] shortcode in all versions up to, and including, 1.6.1 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers with contributor-level and above permissions to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.\n\nTITLE:\n\tCVE-2024-2295",
+            "external_references": [
+                {
+                    "external_id": "CVE-2024-2295",
+                    "source_name": "cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/1cda411b-b277-4b4d-9087-dadede4b67dd?source=cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3095454%40contact-form-manager&new=3095454%40contact-form-manager&sfp_email=&sfph_mail="
+                }
+            ],
+            "id": "vulnerability--c445dbce-303d-4918-9841-8e7a38c26bdb",
+            "modified": "2024-06-01T11:15:05.371Z",
+            "name": "CVE-2024-2295",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--942e9743-99ef-4e30-b7e7-04940adeee73"
+            ],
+            "spec_version": "2.1",
+            "type": "vulnerability"
+        }
+    ],
+    "type": "bundle"
+}

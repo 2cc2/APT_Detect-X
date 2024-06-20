@@ -1,0 +1,63 @@
+{
+    "id": "bundle--687838a2-e16b-4706-b714-1ad90aff2283",
+    "objects": [
+        {
+            "created": "2024-06-01T20:15:10.871Z",
+            "definition": {
+                "statement": "This information may be distributed without restriction."
+            },
+            "definition_type": "statement",
+            "id": "marking-definition--f426a960-b61a-45fe-894b-a39e3b03d2a3",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "spec_version": "2.1",
+            "type": "marking-definition"
+        },
+        {
+            "created": "2024-06-01T11:15:10.620Z",
+            "id": "identity--c5340434-1b73-44aa-86c4-c2935be8dcc4",
+            "modified": "2024-06-01T11:15:10.620Z",
+            "name": "National Vulnerability Database",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--f426a960-b61a-45fe-894b-a39e3b03d2a3"
+            ],
+            "spec_version": "2.1",
+            "type": "identity"
+        },
+        {
+            "created": "2024-06-01T11:15:10.620Z",
+            "created_by_ref": "identity--c5340434-1b73-44aa-86c4-c2935be8dcc4",
+            "description": "The Supreme Modules Lite – Divi Theme, Extra Theme and Divi Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘button_one_id’ parameter in all versions up to, and including, 2.5.51 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.\n\nSOURCE:\n\thttps://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-5501\nPARENT_DESCRIPTION: \nThe Supreme Modules Lite – Divi Theme, Extra Theme and Divi Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘button_one_id’ parameter in all versions up to, and including, 2.5.51 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.\n\nTITLE:\n\tCVE-2024-5501",
+            "external_references": [
+                {
+                    "external_id": "CVE-2024-5501",
+                    "source_name": "cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/6543e6e2-e052-466e-ad19-656fd8d01805?source=cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://plugins.trac.wordpress.org/browser/supreme-modules-for-divi/trunk/includes/modules/Buttons/Buttons.php#L1889"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://plugins.trac.wordpress.org/changeset/3095671/"
+                }
+            ],
+            "id": "vulnerability--bf650947-0a92-49b9-85d3-d7749cab4eeb",
+            "modified": "2024-06-01T11:15:10.620Z",
+            "name": "CVE-2024-5501",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--f426a960-b61a-45fe-894b-a39e3b03d2a3"
+            ],
+            "spec_version": "2.1",
+            "type": "vulnerability"
+        }
+    ],
+    "type": "bundle"
+}

@@ -1,0 +1,59 @@
+{
+    "id": "bundle--7fa06987-830d-4b5d-96a3-3c9b2f8d3dfc",
+    "objects": [
+        {
+            "created": "2024-06-01T20:15:13.300Z",
+            "definition": {
+                "statement": "This information may be distributed without restriction."
+            },
+            "definition_type": "statement",
+            "id": "marking-definition--6cd049fa-7b97-4958-93c8-d6933e68c69e",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "spec_version": "2.1",
+            "type": "marking-definition"
+        },
+        {
+            "created": "2024-06-01T11:15:13.057Z",
+            "id": "identity--697d24b3-06c5-4a2b-982c-a450fad1d3e1",
+            "modified": "2024-06-01T11:15:13.057Z",
+            "name": "National Vulnerability Database",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--6cd049fa-7b97-4958-93c8-d6933e68c69e"
+            ],
+            "spec_version": "2.1",
+            "type": "identity"
+        },
+        {
+            "created": "2024-06-01T11:15:13.057Z",
+            "created_by_ref": "identity--697d24b3-06c5-4a2b-982c-a450fad1d3e1",
+            "description": "The Content Blocks (Custom Post Widget) plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 3.3.0 via the plugin's 'content_block' shortcode. This makes it possible for authenticated attackers, with contributor-level access and above, to include and execute arbitrary files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where images and other “safe” file types can be uploaded and included.\n\nSOURCE:\n\thttps://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-3564\nPARENT_DESCRIPTION: \nThe Content Blocks (Custom Post Widget) plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 3.3.0 via the plugin's 'content_block' shortcode. This makes it possible for authenticated attackers, with contributor-level access and above, to include and execute arbitrary files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where images and other “safe” file types can be uploaded and included.\n\nTITLE:\n\tCVE-2024-3564",
+            "external_references": [
+                {
+                    "external_id": "CVE-2024-3564",
+                    "source_name": "cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/c5a0b8fe-d284-4780-84b5-2e97fa96c99a?source=cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3078739%40custom-post-widget&new=3078739%40custom-post-widget&sfp_email=&sfph_mail="
+                }
+            ],
+            "id": "vulnerability--8211dfef-32e7-44d4-987e-335673e2e232",
+            "modified": "2024-06-01T11:15:13.057Z",
+            "name": "CVE-2024-3564",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--6cd049fa-7b97-4958-93c8-d6933e68c69e"
+            ],
+            "spec_version": "2.1",
+            "type": "vulnerability"
+        }
+    ],
+    "type": "bundle"
+}

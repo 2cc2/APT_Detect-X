@@ -1,0 +1,59 @@
+{
+    "id": "bundle--2a975654-4123-406e-9e9d-e32ce3b6ed80",
+    "objects": [
+        {
+            "created": "2024-06-01T20:15:04.433Z",
+            "definition": {
+                "statement": "This information may be distributed without restriction."
+            },
+            "definition_type": "statement",
+            "id": "marking-definition--71fcf323-ab40-44c5-bba2-e9a3d2e106d8",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "spec_version": "2.1",
+            "type": "marking-definition"
+        },
+        {
+            "created": "2024-06-01T11:15:04.181Z",
+            "id": "identity--6af7afbe-4487-4521-9557-4f7b947e4dec",
+            "modified": "2024-06-01T11:15:04.181Z",
+            "name": "National Vulnerability Database",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--71fcf323-ab40-44c5-bba2-e9a3d2e106d8"
+            ],
+            "spec_version": "2.1",
+            "type": "identity"
+        },
+        {
+            "created": "2024-06-01T11:15:04.181Z",
+            "created_by_ref": "identity--6af7afbe-4487-4521-9557-4f7b947e4dec",
+            "description": "The User Registration – Custom Registration Form, Login Form, and User Profile WordPress Plugin plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the 'import_form_action' function in versions up to, and including, 3.2.0.1. This makes it possible for authenticated attackers, with contributor-level permissions and above, to import a registration form with a default user role of administrator. If an administrator approves or publishes a post or page with the shortcode to the imported form, any user can register as an administrator.\n\nSOURCE:\n\thttps://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-4958\nPARENT_DESCRIPTION: \nThe User Registration – Custom Registration Form, Login Form, and User Profile WordPress Plugin plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the 'import_form_action' function in versions up to, and including, 3.2.0.1. This makes it possible for authenticated attackers, with contributor-level permissions and above, to import a registration form with a default user role of administrator. If an administrator approves or publishes a post or page with the shortcode to the imported form, any user can register as an administrator.\n\nTITLE:\n\tCVE-2024-4958",
+            "external_references": [
+                {
+                    "external_id": "CVE-2024-4958",
+                    "source_name": "cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/710574a8-a6e2-4ee6-9ea7-03a34994fec7?source=cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://plugins.trac.wordpress.org/changeset/3095484/user-registration/tags/3.2.1/includes/class-ur-ajax.php"
+                }
+            ],
+            "id": "vulnerability--ce217f72-440f-40e2-9580-93caf3040768",
+            "modified": "2024-06-01T11:15:04.181Z",
+            "name": "CVE-2024-4958",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--71fcf323-ab40-44c5-bba2-e9a3d2e106d8"
+            ],
+            "spec_version": "2.1",
+            "type": "vulnerability"
+        }
+    ],
+    "type": "bundle"
+}

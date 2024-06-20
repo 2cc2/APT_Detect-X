@@ -1,0 +1,55 @@
+{
+    "id": "bundle--2fe2bd77-a343-4ee1-ba6f-2c4adb1b502d",
+    "objects": [
+        {
+            "created": "2024-06-01T20:15:23.093Z",
+            "definition": {
+                "statement": "This information may be distributed without restriction."
+            },
+            "definition_type": "statement",
+            "id": "marking-definition--fb0426a3-9104-4c57-bf07-c8d90b2c8bd1",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "spec_version": "2.1",
+            "type": "marking-definition"
+        },
+        {
+            "created": "2024-06-01T11:15:22.867Z",
+            "id": "identity--933f07a1-0d97-44d9-a74e-27ca2706a90d",
+            "modified": "2024-06-01T11:15:22.867Z",
+            "name": "National Vulnerability Database",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--fb0426a3-9104-4c57-bf07-c8d90b2c8bd1"
+            ],
+            "spec_version": "2.1",
+            "type": "identity"
+        },
+        {
+            "created": "2024-06-01T11:15:22.867Z",
+            "created_by_ref": "identity--933f07a1-0d97-44d9-a74e-27ca2706a90d",
+            "description": "The logout option within MFA did not include the necessary token to avoid the risk of users inadvertently being logged out via CSRF.\n\nSOURCE:\n\thttps://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-34007\nPARENT_DESCRIPTION: \nThe logout option within MFA did not include the necessary token to avoid the risk of users inadvertently being logged out via CSRF.\n\nTITLE:\n\tCVE-2024-34007",
+            "external_references": [
+                {
+                    "external_id": "CVE-2024-34007",
+                    "source_name": "cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://moodle.org/mod/forum/discuss.php?d=458396"
+                }
+            ],
+            "id": "vulnerability--3583ed9f-dbb9-404e-aa9c-b327f86c9554",
+            "modified": "2024-06-01T11:15:22.867Z",
+            "name": "CVE-2024-34007",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--fb0426a3-9104-4c57-bf07-c8d90b2c8bd1"
+            ],
+            "spec_version": "2.1",
+            "type": "vulnerability"
+        }
+    ],
+    "type": "bundle"
+}

@@ -1,0 +1,75 @@
+{
+    "id": "bundle--327e3df6-0cdc-4d4d-8bbd-f94b097e807d",
+    "objects": [
+        {
+            "created": "2024-06-01T20:15:09.647Z",
+            "definition": {
+                "statement": "This information may be distributed without restriction."
+            },
+            "definition_type": "statement",
+            "id": "marking-definition--bc1417b2-0eb2-4e6d-810e-06b31697a915",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "spec_version": "2.1",
+            "type": "marking-definition"
+        },
+        {
+            "created": "2024-06-01T11:15:09.403Z",
+            "id": "identity--3d06dc41-8cc6-49fd-af29-0dfc524b1a57",
+            "modified": "2024-06-01T11:15:09.403Z",
+            "name": "National Vulnerability Database",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--bc1417b2-0eb2-4e6d-810e-06b31697a915"
+            ],
+            "spec_version": "2.1",
+            "type": "identity"
+        },
+        {
+            "created": "2024-06-01T11:15:09.403Z",
+            "created_by_ref": "identity--3d06dc41-8cc6-49fd-af29-0dfc524b1a57",
+            "description": "The Royal Elementor Addons and Templates plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's image hotspot, image accordion, off canvas, woogrid, and product mini cart widgets in all versions up to, and including, 1.3.975  due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.\n\nSOURCE:\n\thttps://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-4342\nPARENT_DESCRIPTION: \nThe Royal Elementor Addons and Templates plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's image hotspot, image accordion, off canvas, woogrid, and product mini cart widgets in all versions up to, and including, 1.3.975  due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.\n\nTITLE:\n\tCVE-2024-4342",
+            "external_references": [
+                {
+                    "external_id": "CVE-2024-4342",
+                    "source_name": "cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/4d565196-592d-415c-b37c-e54456aa9ed8?source=cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://plugins.trac.wordpress.org/changeset/3094946/royal-elementor-addons/tags/1.3.976/modules/image-hotspots/widgets/wpr-image-hotspots.php?old=3086875&old_path=royal-elementor-addons%2Ftags%2F1.3.975%2Fmodules%2Fimage-hotspots%2Fwidgets%2Fwpr-image-hotspots.php"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://plugins.trac.wordpress.org/changeset/3094946/royal-elementor-addons/tags/1.3.976/modules/image-accordion/widgets/wpr-image-accordion.php?old=3086875&old_path=royal-elementor-addons%2Ftags%2F1.3.975%2Fmodules%2Fimage-accordion%2Fwidgets%2Fwpr-image-accordion.php"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://plugins.trac.wordpress.org/changeset/3094946/royal-elementor-addons/tags/1.3.976/modules/offcanvas/widgets/wpr-offcanvas.php?old=3086875&old_path=royal-elementor-addons%2Ftags%2F1.3.975%2Fmodules%2Foffcanvas%2Fwidgets%2Fwpr-offcanvas.php"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://plugins.trac.wordpress.org/changeset/3094946/royal-elementor-addons/tags/1.3.976/modules/woo-grid/widgets/wpr-woo-grid.php?old=3086875&old_path=royal-elementor-addons%2Ftags%2F1.3.975%2Fmodules%2Fwoo-grid%2Fwidgets%2Fwpr-woo-grid.php"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://plugins.trac.wordpress.org/changeset/3094946/royal-elementor-addons/tags/1.3.976/modules/theme-builder/woocommerce/product-mini-cart/widgets/wpr-product-mini-cart.php?old=3086875&old_path=royal-elementor-addons%2Ftags%2F1.3.975%2Fmodules%2Ftheme-builder%2Fwoocommerce%2Fproduct-mini-cart%2Fwidgets%2Fwpr-product-mini-cart.php"
+                }
+            ],
+            "id": "vulnerability--bde1b3e3-3251-4c90-b0f5-2cd81e2a2239",
+            "modified": "2024-06-01T11:15:09.403Z",
+            "name": "CVE-2024-4342",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--bc1417b2-0eb2-4e6d-810e-06b31697a915"
+            ],
+            "spec_version": "2.1",
+            "type": "vulnerability"
+        }
+    ],
+    "type": "bundle"
+}

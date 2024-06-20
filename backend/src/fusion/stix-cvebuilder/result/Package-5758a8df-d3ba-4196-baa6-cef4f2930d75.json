@@ -1,0 +1,59 @@
+{
+    "id": "bundle--5758a8df-d3ba-4196-baa6-cef4f2930d75",
+    "objects": [
+        {
+            "created": "2024-06-01T20:15:01.037Z",
+            "definition": {
+                "statement": "This information may be distributed without restriction."
+            },
+            "definition_type": "statement",
+            "id": "marking-definition--94d7bf2e-a00a-46db-921d-666e39af1101",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "spec_version": "2.1",
+            "type": "marking-definition"
+        },
+        {
+            "created": "2024-06-01T11:15:00.784Z",
+            "id": "identity--5995da77-5cca-4ac5-b848-685a29e1286c",
+            "modified": "2024-06-01T11:15:00.784Z",
+            "name": "National Vulnerability Database",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--94d7bf2e-a00a-46db-921d-666e39af1101"
+            ],
+            "spec_version": "2.1",
+            "type": "identity"
+        },
+        {
+            "created": "2024-06-01T11:15:00.784Z",
+            "created_by_ref": "identity--5995da77-5cca-4ac5-b848-685a29e1286c",
+            "description": "The wpDataTables – WordPress Data Table, Dynamic Tables & Table Charts Plugin plugin for WordPress is vulnerable to SQL Injection via the 'id_key' parameter of the wdt_delete_table_row AJAX action in all versions up to, and including, 6.3.1 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. Please note this only affects the premium version of the plugin.\n\nSOURCE:\n\thttps://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-3820\nPARENT_DESCRIPTION: \nThe wpDataTables – WordPress Data Table, Dynamic Tables & Table Charts Plugin plugin for WordPress is vulnerable to SQL Injection via the 'id_key' parameter of the wdt_delete_table_row AJAX action in all versions up to, and including, 6.3.1 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. Please note this only affects the premium version of the plugin.\n\nTITLE:\n\tCVE-2024-3820",
+            "external_references": [
+                {
+                    "external_id": "CVE-2024-3820",
+                    "source_name": "cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/fbba822b-172f-4167-bccf-4697a298178e?source=cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://wpdatatables.com/help/whats-new-changelog/"
+                }
+            ],
+            "id": "vulnerability--e4c26655-55e0-4c0a-b6fd-d0e7cafb44d9",
+            "modified": "2024-06-01T11:15:00.784Z",
+            "name": "CVE-2024-3820",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--94d7bf2e-a00a-46db-921d-666e39af1101"
+            ],
+            "spec_version": "2.1",
+            "type": "vulnerability"
+        }
+    ],
+    "type": "bundle"
+}

@@ -1,0 +1,187 @@
+{
+    "id": "bundle--0b475151-101c-42e1-b9b1-e7cc9d602076",
+    "objects": [
+        {
+            "created": "2024-06-01T20:14:58.482Z",
+            "definition": {
+                "statement": "This information may be distributed without restriction."
+            },
+            "definition_type": "statement",
+            "id": "marking-definition--7b4493c7-1f84-4a05-a6b9-f534fce734ef",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "spec_version": "2.1",
+            "type": "marking-definition"
+        },
+        {
+            "created": "2024-06-01T11:14:58.166Z",
+            "id": "identity--06da6758-a6d1-4433-ac25-319ff3386002",
+            "modified": "2024-06-01T11:14:58.166Z",
+            "name": "National Vulnerability Database",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--7b4493c7-1f84-4a05-a6b9-f534fce734ef"
+            ],
+            "spec_version": "2.1",
+            "type": "identity"
+        },
+        {
+            "created": "2024-06-01T11:14:58.166Z",
+            "created_by_ref": "identity--06da6758-a6d1-4433-ac25-319ff3386002",
+            "description": "Cross-Site Request Forgery (CSRF) vulnerability in Uploadcare Uploadcare File Uploader and Adaptive Delivery (beta) uploadcare.This issue affects Uploadcare File Uploader and Adaptive Delivery (beta): from n/a through 3.0.11.\n\nSOURCE:\n\thttps://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-35636\nPARENT_DESCRIPTION: \nCross-Site Request Forgery (CSRF) vulnerability in Uploadcare Uploadcare File Uploader and Adaptive Delivery (beta) uploadcare.This issue affects Uploadcare File Uploader and Adaptive Delivery (beta): from n/a through 3.0.11.\n\nTITLE:\n\tCVE-2024-35636",
+            "external_references": [
+                {
+                    "external_id": "CVE-2024-35636",
+                    "source_name": "cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://patchstack.com/database/vulnerability/uploadcare/wordpress-uploadcare-file-uploader-and-adaptive-delivery-plugin-3-0-11-cross-site-request-forgery-csrf-vulnerability?_s_id=cve"
+                }
+            ],
+            "id": "vulnerability--53707d17-dc0d-4b3e-b0d6-822f942fff92",
+            "modified": "2024-06-01T11:14:58.166Z",
+            "name": "CVE-2024-35636",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--7b4493c7-1f84-4a05-a6b9-f534fce734ef"
+            ],
+            "spec_version": "2.1",
+            "type": "vulnerability"
+        },
+        {
+            "created": "2024-06-01T11:14:58.392Z",
+            "description": "An attacker crafts malicious web links and distributes them (via web pages, email, etc.), typically in a targeted manner, hoping to induce users to click on the link and execute the malicious action against some third-party application. If successful, the action embedded in the malicious link will be processed and accepted by the targeted application with the users' privilege level. This type of attack leverages the persistence and implicit trust placed in user session cookies by many web applications today. In such an architecture, once the user authenticates to an application and a session cookie is created on the user's system, all following transactions for that session are authenticated using that cookie including potential actions initiated by an attacker and simply \"riding\" the existing session cookie.",
+            "external_references": [
+                {
+                    "external_id": "CAPEC-62",
+                    "source_name": "capec"
+                }
+            ],
+            "id": "attack-pattern--214968d2-0104-4e3f-a572-62379e9ae2f5",
+            "modified": "2024-06-01T11:14:58.392Z",
+            "name": "Cross Site Request Forgery",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--7b4493c7-1f84-4a05-a6b9-f534fce734ef"
+            ],
+            "spec_version": "2.1",
+            "type": "attack-pattern"
+        },
+        {
+            "created": "2024-06-01T11:14:58.398Z",
+            "description": "An attacker harvests identifying information about a victim via an active session that the victim's browser has with a social networking site. A victim may have the social networking site open in one tab or perhaps is simply using the \"remember me\" feature to keep his or her session with the social networking site active. An attacker induces a payload to execute in the victim's browser that transparently to the victim initiates a request to the social networking site (e.g., via available social network site APIs) to retrieve identifying information about a victim. While some of this information may be public, the attacker is able to harvest this information in context and may use it for further attacks on the user (e.g., spear phishing). In one example of an attack, an attacker may post a malicious posting that contains an image with an embedded link. The link actually requests identifying information from the social networking site. A victim who views the malicious posting in his or her browser will have sent identifying information to the attacker, as long as the victim had an active session with the social networking site. There are many other ways in which the attacker may get the payload to execute in the victim's browser mainly by finding a way to hide it in some reputable site that the victim visits. The attacker could also send the link to the victim in an e-mail and trick the victim into clicking on the link. This attack is basically a cross site request forgery attack with two main differences. First, there is no action that is performed on behalf of the user aside from harvesting information. So standard CSRF protection may not work in this situation. Second, what is important in this attack pattern is the nature of the data being harvested, which is identifying information that can be obtained and used in context. This real time harvesting of identifying information can be used as a prelude for launching real time targeted social engineering attacks on the victim.",
+            "external_references": [
+                {
+                    "external_id": "CAPEC-467",
+                    "source_name": "capec"
+                }
+            ],
+            "id": "attack-pattern--c546c050-e124-4b0e-bdf1-0dfe531cc3f1",
+            "modified": "2024-06-01T11:14:58.398Z",
+            "name": "Cross Site Identification",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--7b4493c7-1f84-4a05-a6b9-f534fce734ef"
+            ],
+            "spec_version": "2.1",
+            "type": "attack-pattern"
+        },
+        {
+            "created": "2024-06-01T11:14:58.400Z",
+            "description": "An attacker targets a system that uses JavaScript Object Notation (JSON) as a transport mechanism between the client and the server (common in Web 2.0 systems using AJAX) to steal possibly confidential information transmitted from the server back to the client inside the JSON object by taking advantage of the loophole in the browser's Same Origin Policy that does not prohibit JavaScript from one website to be included and executed in the context of another website. An attacker gets the victim to visit his or her malicious page that contains a script tag whose source points to the vulnerable system with a URL that requests a response from the server containing a JSON object with possibly confidential information. The malicious page also contains malicious code to capture the JSON object returned by the server before any other processing on it can take place, typically by overriding the JavaScript function used to create new objects. This hook allows the malicious code to get access to the creation of each object and transmit the possibly sensitive contents of the captured JSON object to the attackers' server. There is nothing in the browser's security model to prevent the attackers' malicious JavaScript code (originating from attacker's domain) to set up an environment (as described above) to intercept a JSON object response (coming from the vulnerable target system's domain), read its contents and transmit to the attackers' controlled site. The same origin policy protects the domain object model (DOM), but not the JSON.",
+            "external_references": [
+                {
+                    "external_id": "CAPEC-111",
+                    "source_name": "capec"
+                }
+            ],
+            "id": "attack-pattern--45196d4b-bb90-4a65-b296-3274181b0d4b",
+            "modified": "2024-06-01T11:14:58.400Z",
+            "name": "JSON Hijacking (aka JavaScript Hijacking)",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--7b4493c7-1f84-4a05-a6b9-f534fce734ef"
+            ],
+            "spec_version": "2.1",
+            "type": "attack-pattern"
+        },
+        {
+            "created": "2024-06-01T11:14:58.401Z",
+            "description": "An attacker initiates cross domain HTTP / GET requests and times the server responses. The timing of these responses may leak important information on what is happening on the server. Browser's same origin policy prevents the attacker from directly reading the server responses (in the absence of any other weaknesses), but does not prevent the attacker from timing the responses to requests that the attacker issued cross domain. For GET requests an attacker could for instance leverage the \"img\" tag in conjunction with \"onload() / onerror()\" javascript events. For the POST requests, an attacker could leverage the \"iframe\" element and leverage the \"onload()\" event. There is nothing in the current browser security model that prevents an attacker to use these methods to time responses to the attackers' cross domain requests. The timing for these responses leaks information. For instance, if a victim has an active session with their online e-mail account, an attacker could issue search requests in the victim's mailbox. While the attacker is not able to view the responses, based on the timings of the responses, the attacker could ask yes / no questions as to the content of victim's e-mails, who the victim e-mailed, when, etc. This is but one example; There are other scenarios where an attacker could infer potentially sensitive information from cross domain requests by timing the responses while asking the right questions that leak information.",
+            "external_references": [
+                {
+                    "external_id": "CAPEC-462",
+                    "source_name": "capec"
+                }
+            ],
+            "id": "attack-pattern--100e59c7-25a8-427c-829d-e7e1628bb832",
+            "modified": "2024-06-01T11:14:58.401Z",
+            "name": "Cross-Domain Search Timing",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--7b4493c7-1f84-4a05-a6b9-f534fce734ef"
+            ],
+            "spec_version": "2.1",
+            "type": "attack-pattern"
+        },
+        {
+            "created": "2024-06-01T11:14:58.392Z",
+            "id": "relationship--18d60f69-83f7-479c-8642-800deafcb8f4",
+            "modified": "2024-06-01T11:14:58.392Z",
+            "object_marking_refs": [
+                "marking-definition--7b4493c7-1f84-4a05-a6b9-f534fce734ef",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--214968d2-0104-4e3f-a572-62379e9ae2f5",
+            "spec_version": "2.1",
+            "target_ref": "vulnerability--53707d17-dc0d-4b3e-b0d6-822f942fff92",
+            "type": "relationship"
+        },
+        {
+            "created": "2024-06-01T11:14:58.398Z",
+            "id": "relationship--df18f750-cc72-4d5a-a1f4-1320ddaf5de0",
+            "modified": "2024-06-01T11:14:58.398Z",
+            "object_marking_refs": [
+                "marking-definition--7b4493c7-1f84-4a05-a6b9-f534fce734ef",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--c546c050-e124-4b0e-bdf1-0dfe531cc3f1",
+            "spec_version": "2.1",
+            "target_ref": "vulnerability--53707d17-dc0d-4b3e-b0d6-822f942fff92",
+            "type": "relationship"
+        },
+        {
+            "created": "2024-06-01T11:14:58.400Z",
+            "id": "relationship--bee6568d-df84-4806-be1a-5da14fb71ec4",
+            "modified": "2024-06-01T11:14:58.400Z",
+            "object_marking_refs": [
+                "marking-definition--7b4493c7-1f84-4a05-a6b9-f534fce734ef",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--45196d4b-bb90-4a65-b296-3274181b0d4b",
+            "spec_version": "2.1",
+            "target_ref": "vulnerability--53707d17-dc0d-4b3e-b0d6-822f942fff92",
+            "type": "relationship"
+        },
+        {
+            "created": "2024-06-01T11:14:58.401Z",
+            "id": "relationship--4a23509d-c160-4e7f-8235-4a36345da775",
+            "modified": "2024-06-01T11:14:58.401Z",
+            "object_marking_refs": [
+                "marking-definition--7b4493c7-1f84-4a05-a6b9-f534fce734ef",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--100e59c7-25a8-427c-829d-e7e1628bb832",
+            "spec_version": "2.1",
+            "target_ref": "vulnerability--53707d17-dc0d-4b3e-b0d6-822f942fff92",
+            "type": "relationship"
+        }
+    ],
+    "type": "bundle"
+}

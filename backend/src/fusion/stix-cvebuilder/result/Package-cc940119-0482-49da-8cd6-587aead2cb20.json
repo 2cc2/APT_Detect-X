@@ -1,0 +1,55 @@
+{
+    "id": "bundle--cc940119-0482-49da-8cd6-587aead2cb20",
+    "objects": [
+        {
+            "created": "2024-06-01T20:15:25.106Z",
+            "definition": {
+                "statement": "This information may be distributed without restriction."
+            },
+            "definition_type": "statement",
+            "id": "marking-definition--e372ba8e-283f-422a-a6c8-6bdee54f6c47",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "spec_version": "2.1",
+            "type": "marking-definition"
+        },
+        {
+            "created": "2024-06-01T11:15:24.866Z",
+            "id": "identity--cbe2469f-252a-44d3-ac86-dda375ab82ca",
+            "modified": "2024-06-01T11:15:24.866Z",
+            "name": "National Vulnerability Database",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--e372ba8e-283f-422a-a6c8-6bdee54f6c47"
+            ],
+            "spec_version": "2.1",
+            "type": "identity"
+        },
+        {
+            "created": "2024-06-01T11:15:24.866Z",
+            "created_by_ref": "identity--cbe2469f-252a-44d3-ac86-dda375ab82ca",
+            "description": "Insufficient checks whether ReCAPTCHA was enabled made it possible to bypass the checks on the login page. This did not affect other pages where ReCAPTCHA is utilized.\n\nSOURCE:\n\thttps://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-34009\nPARENT_DESCRIPTION: \nInsufficient checks whether ReCAPTCHA was enabled made it possible to bypass the checks on the login page. This did not affect other pages where ReCAPTCHA is utilized.\n\nTITLE:\n\tCVE-2024-34009",
+            "external_references": [
+                {
+                    "external_id": "CVE-2024-34009",
+                    "source_name": "cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://moodle.org/mod/forum/discuss.php?d=458398"
+                }
+            ],
+            "id": "vulnerability--b279a1ab-8baa-453c-9ead-ff7c7db32e2e",
+            "modified": "2024-06-01T11:15:24.866Z",
+            "name": "CVE-2024-34009",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--e372ba8e-283f-422a-a6c8-6bdee54f6c47"
+            ],
+            "spec_version": "2.1",
+            "type": "vulnerability"
+        }
+    ],
+    "type": "bundle"
+}

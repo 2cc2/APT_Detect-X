@@ -1,0 +1,55 @@
+{
+    "id": "bundle--ce1ad121-b149-43a8-98a1-c3f6c47ac4c5",
+    "objects": [
+        {
+            "created": "2024-06-01T20:15:24.063Z",
+            "definition": {
+                "statement": "This information may be distributed without restriction."
+            },
+            "definition_type": "statement",
+            "id": "marking-definition--7b13c7fd-e119-4814-a4d1-e2b3c7f279cc",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "spec_version": "2.1",
+            "type": "marking-definition"
+        },
+        {
+            "created": "2024-06-01T11:15:23.820Z",
+            "id": "identity--365b6d5c-d104-4fbe-ab19-623f28ae5d26",
+            "modified": "2024-06-01T11:15:23.820Z",
+            "name": "National Vulnerability Database",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--7b13c7fd-e119-4814-a4d1-e2b3c7f279cc"
+            ],
+            "spec_version": "2.1",
+            "type": "identity"
+        },
+        {
+            "created": "2024-06-01T11:15:23.820Z",
+            "created_by_ref": "identity--365b6d5c-d104-4fbe-ab19-623f28ae5d26",
+            "description": "Actions in the admin management of analytics models did not include the necessary token to prevent a CSRF risk.\n\nSOURCE:\n\thttps://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-34008\nPARENT_DESCRIPTION: \nActions in the admin management of analytics models did not include the necessary token to prevent a CSRF risk.\n\nTITLE:\n\tCVE-2024-34008",
+            "external_references": [
+                {
+                    "external_id": "CVE-2024-34008",
+                    "source_name": "cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://moodle.org/mod/forum/discuss.php?d=458397"
+                }
+            ],
+            "id": "vulnerability--354b185c-577f-4430-9745-13df9c0ed306",
+            "modified": "2024-06-01T11:15:23.820Z",
+            "name": "CVE-2024-34008",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--7b13c7fd-e119-4814-a4d1-e2b3c7f279cc"
+            ],
+            "spec_version": "2.1",
+            "type": "vulnerability"
+        }
+    ],
+    "type": "bundle"
+}

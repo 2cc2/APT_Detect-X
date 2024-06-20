@@ -1,0 +1,59 @@
+{
+    "id": "bundle--b6476c84-751f-4f71-97ef-7a8681105957",
+    "objects": [
+        {
+            "created": "2024-06-01T20:15:02.224Z",
+            "definition": {
+                "statement": "This information may be distributed without restriction."
+            },
+            "definition_type": "statement",
+            "id": "marking-definition--e4a8fb34-6301-4ad1-9075-40d7c8f2779d",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "spec_version": "2.1",
+            "type": "marking-definition"
+        },
+        {
+            "created": "2024-06-01T11:15:01.978Z",
+            "id": "identity--7ac7db86-2d85-4c93-b57d-70acda984406",
+            "modified": "2024-06-01T11:15:01.978Z",
+            "name": "National Vulnerability Database",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--e4a8fb34-6301-4ad1-9075-40d7c8f2779d"
+            ],
+            "spec_version": "2.1",
+            "type": "identity"
+        },
+        {
+            "created": "2024-06-01T11:15:01.978Z",
+            "created_by_ref": "identity--7ac7db86-2d85-4c93-b57d-70acda984406",
+            "description": "The wpDataTables – WordPress Data Table, Dynamic Tables & Table Charts Plugin plugin for WordPress is vulnerable to unauthorized access due to a missing capability check on several functions in the wdt_ajax_actions.php file in all versions up to, and including, 6.3.2. This makes it possible for unauthenticated attackers to manipulate data tables. Please note this only affects the premium version of the plugin.\n\nSOURCE:\n\thttps://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-3821\nPARENT_DESCRIPTION: \nThe wpDataTables – WordPress Data Table, Dynamic Tables & Table Charts Plugin plugin for WordPress is vulnerable to unauthorized access due to a missing capability check on several functions in the wdt_ajax_actions.php file in all versions up to, and including, 6.3.2. This makes it possible for unauthenticated attackers to manipulate data tables. Please note this only affects the premium version of the plugin.\n\nTITLE:\n\tCVE-2024-3821",
+            "external_references": [
+                {
+                    "external_id": "CVE-2024-3821",
+                    "source_name": "cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/d32215b5-9ecb-4feb-b76f-18821184dd8b?source=cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://wpdatatables.com/help/whats-new-changelog/"
+                }
+            ],
+            "id": "vulnerability--9fc25cf6-9ab2-4ba2-96f7-70d862583831",
+            "modified": "2024-06-01T11:15:01.978Z",
+            "name": "CVE-2024-3821",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--e4a8fb34-6301-4ad1-9075-40d7c8f2779d"
+            ],
+            "spec_version": "2.1",
+            "type": "vulnerability"
+        }
+    ],
+    "type": "bundle"
+}

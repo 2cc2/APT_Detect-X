@@ -1,0 +1,59 @@
+{
+    "id": "bundle--8204be94-3220-4810-9437-6c135fe7d1e4",
+    "objects": [
+        {
+            "created": "2024-06-01T20:15:07.536Z",
+            "definition": {
+                "statement": "This information may be distributed without restriction."
+            },
+            "definition_type": "statement",
+            "id": "marking-definition--0608d4a9-1f5a-4763-a428-b8a0e6c494f6",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "spec_version": "2.1",
+            "type": "marking-definition"
+        },
+        {
+            "created": "2024-06-01T11:15:07.307Z",
+            "id": "identity--301d8d14-7c8b-4bf4-a5df-7691a36f9fa6",
+            "modified": "2024-06-01T11:15:07.307Z",
+            "name": "National Vulnerability Database",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--0608d4a9-1f5a-4763-a428-b8a0e6c494f6"
+            ],
+            "spec_version": "2.1",
+            "type": "identity"
+        },
+        {
+            "created": "2024-06-01T11:15:07.307Z",
+            "created_by_ref": "identity--301d8d14-7c8b-4bf4-a5df-7691a36f9fa6",
+            "description": "The Popup Builder – Create highly converting, mobile friendly marketing popups. plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the custom JS functionality in all versions up to, and including, 4.2.7 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.\n\nSOURCE:\n\thttps://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-2506\nPARENT_DESCRIPTION: \nThe Popup Builder – Create highly converting, mobile friendly marketing popups. plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the custom JS functionality in all versions up to, and including, 4.2.7 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.\n\nTITLE:\n\tCVE-2024-2506",
+            "external_references": [
+                {
+                    "external_id": "CVE-2024-2506",
+                    "source_name": "cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/804a973e-4650-428c-910f-09e4fc3aa4bb?source=cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3085485%40popup-builder&new=3085485%40popup-builder&sfp_email=&sfph_mail=#file51"
+                }
+            ],
+            "id": "vulnerability--065ae93c-e311-4af7-bf82-e942be78503c",
+            "modified": "2024-06-01T11:15:07.307Z",
+            "name": "CVE-2024-2506",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--0608d4a9-1f5a-4763-a428-b8a0e6c494f6"
+            ],
+            "spec_version": "2.1",
+            "type": "vulnerability"
+        }
+    ],
+    "type": "bundle"
+}

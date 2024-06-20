@@ -1,0 +1,101 @@
+[
+    {
+        "type": "indicator",
+        "spec_version": "2.1",
+        "id": "indicator--1cd4d8d1-5145-4c1f-9531-c25b099abf9e",
+        "created": "2024-06-16T08:22:10.19328Z",
+        "modified": "2024-06-16T08:22:10.19328Z",
+        "pattern": "[file:hashes.'SHA-256' = 'd72ba95c67364911636a82f711732eb67e235bb31b17928e832228e847d25890']",
+        "pattern_type": "stix",
+        "pattern_version": "2.1",
+        "valid_from": "2024-06-16T08:22:10.19328Z",
+        "labels": [
+            "malicious-activity"
+        ],
+        "external_references": [
+            {
+                "source_name": "URLhaus",
+                "description": "URLhaus download link",
+                "url": "https://urlhaus-api.abuse.ch/v1/download/d72ba95c67364911636a82f711732eb67e235bb31b17928e832228e847d25890/"
+            }
+        ]
+    },
+    {
+        "type": "observed-data",
+        "spec_version": "2.1",
+        "id": "observed-data--ec1d8c24-012f-4960-9bd1-a87a3900e619",
+        "created": "2024-06-16T08:22:10.280159Z",
+        "modified": "2024-06-16T08:22:10.280159Z",
+        "first_observed": "2022-12-07T00:00:00Z",
+        "last_observed": "2022-12-10T00:00:00Z",
+        "number_observed": 1,
+        "objects": {
+            "0": {
+                "type": "url",
+                "spec_version": "2.1",
+                "id": "url--d7b09eef-8197-5857-81ae-c3192c23fef3",
+                "value": "http://31.41.244.188/lego/MS-office%20(x64)00000345678.exe"
+            },
+            "1": {
+                "type": "file",
+                "spec_version": "2.1",
+                "id": "file--e4773170-c393-5526-9fa3-ab15a804715f",
+                "hashes": {
+                    "SHA-256": "d72ba95c67364911636a82f711732eb67e235bb31b17928e832228e847d25890"
+                }
+            }
+        }
+    },
+    {
+        "type": "observed-data",
+        "spec_version": "2.1",
+        "id": "observed-data--2b3bd4f0-8628-4c20-b814-dfee752e749e",
+        "created": "2024-06-16T08:22:10.287546Z",
+        "modified": "2024-06-16T08:22:10.287546Z",
+        "first_observed": "2022-11-26T00:00:00Z",
+        "last_observed": "2022-12-03T00:00:00Z",
+        "number_observed": 1,
+        "objects": {
+            "0": {
+                "type": "url",
+                "spec_version": "2.1",
+                "id": "url--367e5841-d924-53c1-9d85-bb8ecd448c27",
+                "value": "http://77.73.133.113/lego/Loader.exe"
+            },
+            "1": {
+                "type": "file",
+                "spec_version": "2.1",
+                "id": "file--e4773170-c393-5526-9fa3-ab15a804715f",
+                "hashes": {
+                    "SHA-256": "d72ba95c67364911636a82f711732eb67e235bb31b17928e832228e847d25890"
+                }
+            }
+        }
+    },
+    {
+        "type": "observed-data",
+        "spec_version": "2.1",
+        "id": "observed-data--75a45c13-ad6b-4908-b9f5-1fc807b060da",
+        "created": "2024-06-16T08:22:10.293847Z",
+        "modified": "2024-06-16T08:22:10.293847Z",
+        "first_observed": "2022-11-24T00:00:00Z",
+        "last_observed": "2022-11-26T00:00:00Z",
+        "number_observed": 1,
+        "objects": {
+            "0": {
+                "type": "url",
+                "spec_version": "2.1",
+                "id": "url--4ac50d7a-3611-5178-af16-41c7182e8e2c",
+                "value": "http://77.73.133.113/lego/mine.exe"
+            },
+            "1": {
+                "type": "file",
+                "spec_version": "2.1",
+                "id": "file--e4773170-c393-5526-9fa3-ab15a804715f",
+                "hashes": {
+                    "SHA-256": "d72ba95c67364911636a82f711732eb67e235bb31b17928e832228e847d25890"
+                }
+            }
+        }
+    }
+]

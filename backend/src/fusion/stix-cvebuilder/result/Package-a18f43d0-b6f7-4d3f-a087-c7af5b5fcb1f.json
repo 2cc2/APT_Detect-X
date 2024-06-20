@@ -1,0 +1,59 @@
+{
+    "id": "bundle--a18f43d0-b6f7-4d3f-a087-c7af5b5fcb1f",
+    "objects": [
+        {
+            "created": "2024-06-01T20:15:06.590Z",
+            "definition": {
+                "statement": "This information may be distributed without restriction."
+            },
+            "definition_type": "statement",
+            "id": "marking-definition--0e8bcf46-6785-49ca-8d4e-0668c09ecc3f",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "spec_version": "2.1",
+            "type": "marking-definition"
+        },
+        {
+            "created": "2024-06-01T11:15:06.371Z",
+            "id": "identity--e30956b6-2ee0-4b8a-a0cf-c500ad3049f5",
+            "modified": "2024-06-01T11:15:06.371Z",
+            "name": "National Vulnerability Database",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--0e8bcf46-6785-49ca-8d4e-0668c09ecc3f"
+            ],
+            "spec_version": "2.1",
+            "type": "identity"
+        },
+        {
+            "created": "2024-06-01T11:15:06.371Z",
+            "created_by_ref": "identity--e30956b6-2ee0-4b8a-a0cf-c500ad3049f5",
+            "description": "The QQWorld Auto Save Images plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the save_remote_images_get_auto_saved_results() function hooked via a norpriv AJAX in all versions up to, and including, 1.9.8. This makes it possible for unauthenticated attackers to retrieve the contents of arbitrary posts that may not be public.\n\nSOURCE:\n\thttps://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-1324\nPARENT_DESCRIPTION: \nThe QQWorld Auto Save Images plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the save_remote_images_get_auto_saved_results() function hooked via a norpriv AJAX in all versions up to, and including, 1.9.8. This makes it possible for unauthenticated attackers to retrieve the contents of arbitrary posts that may not be public.\n\nTITLE:\n\tCVE-2024-1324",
+            "external_references": [
+                {
+                    "external_id": "CVE-2024-1324",
+                    "source_name": "cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/ed82f527-b7af-4466-a977-855f109ed997?source=cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://plugins.trac.wordpress.org/browser/qqworld-auto-save-images/trunk/qqworld-auto-save-images.php#L417"
+                }
+            ],
+            "id": "vulnerability--c8022666-d40b-43da-8ffa-9c0c5a495f9c",
+            "modified": "2024-06-01T11:15:06.371Z",
+            "name": "CVE-2024-1324",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--0e8bcf46-6785-49ca-8d4e-0668c09ecc3f"
+            ],
+            "spec_version": "2.1",
+            "type": "vulnerability"
+        }
+    ],
+    "type": "bundle"
+}

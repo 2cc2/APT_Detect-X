@@ -1,0 +1,59 @@
+{
+    "id": "bundle--0169eb73-3877-4d7f-9f5d-ead7038b87ab",
+    "objects": [
+        {
+            "created": "2024-06-01T20:14:59.925Z",
+            "definition": {
+                "statement": "This information may be distributed without restriction."
+            },
+            "definition_type": "statement",
+            "id": "marking-definition--8e46eb09-1b5b-4647-ae8b-763058b134d9",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "spec_version": "2.1",
+            "type": "marking-definition"
+        },
+        {
+            "created": "2024-06-01T11:14:59.667Z",
+            "id": "identity--d7c1a4e6-98e4-42d9-85a6-6944b1efca9c",
+            "modified": "2024-06-01T11:14:59.667Z",
+            "name": "National Vulnerability Database",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--8e46eb09-1b5b-4647-ae8b-763058b134d9"
+            ],
+            "spec_version": "2.1",
+            "type": "identity"
+        },
+        {
+            "created": "2024-06-01T11:14:59.667Z",
+            "created_by_ref": "identity--d7c1a4e6-98e4-42d9-85a6-6944b1efca9c",
+            "description": "The wpForo Forum plugin for WordPress is vulnerable to SQL Injection via the 'slug' attribute of the 'wpforo' shortcode in all versions up to, and including, 2.3.3 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for authenticated attackers, with contributor-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.\n\nSOURCE:\n\thttps://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-3200\nPARENT_DESCRIPTION: \nThe wpForo Forum plugin for WordPress is vulnerable to SQL Injection via the 'slug' attribute of the 'wpforo' shortcode in all versions up to, and including, 2.3.3 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for authenticated attackers, with contributor-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.\n\nTITLE:\n\tCVE-2024-3200",
+            "external_references": [
+                {
+                    "external_id": "CVE-2024-3200",
+                    "source_name": "cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/f54cdad2-88db-4604-8064-fa6175176760?source=cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://plugins.trac.wordpress.org/changeset?old_path=/wpforo/tags/2.3.3&new_path=/wpforo/tags/2.3.4&sfp_email=&sfph_mail="
+                }
+            ],
+            "id": "vulnerability--69441682-7494-4fbe-8020-37d75a49d966",
+            "modified": "2024-06-01T11:14:59.667Z",
+            "name": "CVE-2024-3200",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--8e46eb09-1b5b-4647-ae8b-763058b134d9"
+            ],
+            "spec_version": "2.1",
+            "type": "vulnerability"
+        }
+    ],
+    "type": "bundle"
+}

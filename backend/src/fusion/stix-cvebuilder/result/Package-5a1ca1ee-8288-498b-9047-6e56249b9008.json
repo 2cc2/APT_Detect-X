@@ -1,0 +1,55 @@
+{
+    "id": "bundle--5a1ca1ee-8288-498b-9047-6e56249b9008",
+    "objects": [
+        {
+            "created": "2024-06-01T20:15:27.240Z",
+            "definition": {
+                "statement": "This information may be distributed without restriction."
+            },
+            "definition_type": "statement",
+            "id": "marking-definition--1c09e27b-58cf-434c-a7a4-b551b8524789",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "spec_version": "2.1",
+            "type": "marking-definition"
+        },
+        {
+            "created": "2024-06-01T11:15:26.980Z",
+            "id": "identity--bc8b8606-6955-4e7c-8757-5250ea224708",
+            "modified": "2024-06-01T11:15:26.980Z",
+            "name": "National Vulnerability Database",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--1c09e27b-58cf-434c-a7a4-b551b8524789"
+            ],
+            "spec_version": "2.1",
+            "type": "identity"
+        },
+        {
+            "created": "2024-06-01T11:15:26.980Z",
+            "created_by_ref": "identity--bc8b8606-6955-4e7c-8757-5250ea224708",
+            "description": "Incorrect validation of allowed event types in a calendar web service made it possible for some users to create events with types/audiences they did not have permission to publish to.\n\nSOURCE:\n\thttps://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-33996\nPARENT_DESCRIPTION: \nIncorrect validation of allowed event types in a calendar web service made it possible for some users to create events with types/audiences they did not have permission to publish to.\n\nTITLE:\n\tCVE-2024-33996",
+            "external_references": [
+                {
+                    "external_id": "CVE-2024-33996",
+                    "source_name": "cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://moodle.org/mod/forum/discuss.php?d=458384#p1840909"
+                }
+            ],
+            "id": "vulnerability--aa370a2d-039a-4b24-97a5-8895ba497e72",
+            "modified": "2024-06-01T11:15:26.980Z",
+            "name": "CVE-2024-33996",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--1c09e27b-58cf-434c-a7a4-b551b8524789"
+            ],
+            "spec_version": "2.1",
+            "type": "vulnerability"
+        }
+    ],
+    "type": "bundle"
+}

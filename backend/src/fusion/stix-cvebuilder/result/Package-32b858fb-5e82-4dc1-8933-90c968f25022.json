@@ -1,0 +1,55 @@
+{
+    "id": "bundle--32b858fb-5e82-4dc1-8933-90c968f25022",
+    "objects": [
+        {
+            "created": "2024-06-01T20:15:22.142Z",
+            "definition": {
+                "statement": "This information may be distributed without restriction."
+            },
+            "definition_type": "statement",
+            "id": "marking-definition--d07afea3-186f-42cd-9093-a12e4fb971b8",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "spec_version": "2.1",
+            "type": "marking-definition"
+        },
+        {
+            "created": "2024-06-01T11:15:21.918Z",
+            "id": "identity--0b38c5dd-e862-4f90-b011-00736d695cd8",
+            "modified": "2024-06-01T11:15:21.918Z",
+            "name": "National Vulnerability Database",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--d07afea3-186f-42cd-9093-a12e4fb971b8"
+            ],
+            "spec_version": "2.1",
+            "type": "identity"
+        },
+        {
+            "created": "2024-06-01T11:15:21.918Z",
+            "created_by_ref": "identity--0b38c5dd-e862-4f90-b011-00736d695cd8",
+            "description": "The site log report required additional encoding of event descriptions to ensure any HTML in the content is displayed in plaintext instead of being rendered.\n\nSOURCE:\n\thttps://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-34006\nPARENT_DESCRIPTION: \nThe site log report required additional encoding of event descriptions to ensure any HTML in the content is displayed in plaintext instead of being rendered.\n\nTITLE:\n\tCVE-2024-34006",
+            "external_references": [
+                {
+                    "external_id": "CVE-2024-34006",
+                    "source_name": "cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://moodle.org/mod/forum/discuss.php?d=458395"
+                }
+            ],
+            "id": "vulnerability--40a20c96-d309-4208-9ab4-332cf12023a2",
+            "modified": "2024-06-01T11:15:21.918Z",
+            "name": "CVE-2024-34006",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--d07afea3-186f-42cd-9093-a12e4fb971b8"
+            ],
+            "spec_version": "2.1",
+            "type": "vulnerability"
+        }
+    ],
+    "type": "bundle"
+}

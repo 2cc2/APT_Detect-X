@@ -1,0 +1,55 @@
+{
+    "id": "bundle--dc6da0fd-8ca6-41f1-9c3f-a19e410623a9",
+    "objects": [
+        {
+            "created": "2024-06-01T20:15:18.856Z",
+            "definition": {
+                "statement": "This information may be distributed without restriction."
+            },
+            "definition_type": "statement",
+            "id": "marking-definition--6f44aed7-3a0d-4f2c-97e6-9605cdd2ca04",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "spec_version": "2.1",
+            "type": "marking-definition"
+        },
+        {
+            "created": "2024-06-01T11:15:18.616Z",
+            "id": "identity--304b44fd-1ecb-4b11-a659-2829b7dcf928",
+            "modified": "2024-06-01T11:15:18.616Z",
+            "name": "National Vulnerability Database",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--6f44aed7-3a0d-4f2c-97e6-9605cdd2ca04"
+            ],
+            "spec_version": "2.1",
+            "type": "identity"
+        },
+        {
+            "created": "2024-06-01T11:15:18.616Z",
+            "created_by_ref": "identity--304b44fd-1ecb-4b11-a659-2829b7dcf928",
+            "description": "In a shared hosting environment that has been misconfigured to allow access to other users' content, a Moodle user with both access to restore feedback modules and direct access to the web server outside of the Moodle webroot could execute a local file include.\n\nSOURCE:\n\thttps://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-34002\nPARENT_DESCRIPTION: \nIn a shared hosting environment that has been misconfigured to allow access to other users' content, a Moodle user with both access to restore feedback modules and direct access to the web server outside of the Moodle webroot could execute a local file include.\n\nTITLE:\n\tCVE-2024-34002",
+            "external_references": [
+                {
+                    "external_id": "CVE-2024-34002",
+                    "source_name": "cve"
+                },
+                {
+                    "source_name": "internet_resource",
+                    "url": "https://moodle.org/mod/forum/discuss.php?d=458390"
+                }
+            ],
+            "id": "vulnerability--0788d880-391c-46be-a542-008e52527cc0",
+            "modified": "2024-06-01T11:15:18.616Z",
+            "name": "CVE-2024-34002",
+            "object_marking_refs": [
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+                "marking-definition--6f44aed7-3a0d-4f2c-97e6-9605cdd2ca04"
+            ],
+            "spec_version": "2.1",
+            "type": "vulnerability"
+        }
+    ],
+    "type": "bundle"
+}
