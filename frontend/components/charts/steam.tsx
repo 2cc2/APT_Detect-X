@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Chart, { Props } from "react-apexcharts";
 
-
 export const Steam = () => {
   const [series, setSeries] = useState<Props["series"]>([]);
   const [options, setOptions] = useState<Props["options"]>({});

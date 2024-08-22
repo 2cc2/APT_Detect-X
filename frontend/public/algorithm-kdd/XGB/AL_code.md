@@ -114,13 +114,15 @@ print(f"y_except Shape: {y_except.shape}")
 
 ## 数据标注
 
-- Cell 1
+- Cell 2
 
 ```python XGB_AL_KDD_Lable.py
+import joblib
 import numpy as np
 import pandas as pd
 from xgboost import XGBClassifier
 from sklearn.metrics import accuracy_score, classification_report
+from sklearn.model_selection import StratifiedKFold, cross_val_score
 
 # 初始化XGBoost模型
 clf = XGBClassifier(use_label_encoder=False, eval_metric='logloss', random_state=42)
@@ -164,9 +166,35 @@ for iteration in range(max_iterations):
     # 重新训练模型
     clf.fit(X_train_labelled, y_train_labelled)
 
+# 保存训练好的模型
+joblib.dump(clf, '../model/kdd/XGB_AL.pkl')
+
 # 模型评估
 y_pred = clf.predict(X_test)
 print("Accuracy:", accuracy_score(y_test, y_pred))
 print("Classification Report:")
 print(classification_report(y_test, y_pred))
+
+# 交叉验证方法1: cross_val_score
+cv_scores = cross_val_score(clf, pd.concat([X_train, X_test]), pd.concat([y_train, y_test]), cv=5)
+print("Cross-validation scores (cross_val_score):", cv_scores)
+print("Average cross-validation score:", np.mean(cv_scores))
+print()
+
+# 交叉验证方法2: StratifiedKFold
+# 初始化StratifiedKFold
+skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+scores = []
+
+# 使用StratifiedKFold进行交叉验证
+for train_index, test_index in skf.split(pd.concat([X_train, X_test]), pd.concat([y_train, y_test])):
+    X_train_fold, X_test_fold = pd.concat([X_train, X_test]).iloc[train_index], pd.concat([X_train, X_test]).iloc[test_index]
+    y_train_fold, y_test_fold = pd.concat([y_train, y_test]).iloc[train_index], pd.concat([y_train, y_test]).iloc[test_index]
+    clf.fit(X_train_fold, y_train_fold)
+    scores.append(clf.score(X_test_fold, y_test_fold))
+
+print("StratifiedKFold cross-validation scores:", scores)
+print("Average score:", np.mean(scores))
+print()
+
 ```

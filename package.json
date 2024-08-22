@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "@matejmazur/react-mathjax": "^0.1.10"
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@matejmazur/react-mathjax": "^0.1.10",
+    "@mui/material": "^5.16.7"
   }
 }

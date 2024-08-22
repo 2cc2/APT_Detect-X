@@ -1,18 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   AppstoreOutlined,
   CalendarOutlined,
-  LinkOutlined,
   MailOutlined,
   SettingOutlined,
-  MenuFoldOutlined,
-  MenuUnfoldOutlined
 } from '@ant-design/icons';
-import { Button, Menu, Divider } from 'antd';
+import {  Menu, Divider } from 'antd';
 import type { GetProp, MenuProps } from 'antd';
 
-
-type MenuTheme = GetProp<MenuProps, 'theme'>;
 
 type MenuItem = GetProp<MenuProps, 'items'>[number];
 
@@ -55,6 +50,14 @@ const items: MenuItem[] = [
           </a>
         ),
       },
+      {
+        key: '22',
+        label: (
+          <a href="/dataset/cve_att" rel="noopener noreferrer">
+            CveToAtt
+          </a>
+        ),
+      },
     ],
   },
   {
@@ -82,11 +85,21 @@ const items: MenuItem[] = [
         key: '20',
         label: (
           <a href="/DataFusion/urlhause" rel="noopener noreferrer">
-            URLHause数据集
+            URLHaus数据集
           </a>
         ),
       },
     ],
+  },
+  {
+    key: '21',
+    icon: <MailOutlined />, 
+    label: (
+      <a href="/DataAnalysis" rel="noopener noreferrer">
+        数据分析
+      </a>
+    ),
+    children:[],
   },
   {
     key: 'sub1',
@@ -168,6 +181,27 @@ const items: MenuItem[] = [
         label:
           <a href="/algorithm/XGB" rel="noopener noreferrer">
             XGBoost分类器
+          </a>
+      },
+    ],
+  },
+  {
+    key: 'sub5',
+    label: '大模型设计',
+    icon: <AppstoreOutlined />,
+    children: [
+      {
+        key: '23',
+        label:
+          <a href="/LLMtraining/bert" rel="noopener noreferrer">
+            BERT模型
+          </a>
+      },
+      {
+        key: '24',
+        label:
+          <a href="/LLMtraining/bertxg" rel="noopener noreferrer">
+            BERT+XGBoost模型
           </a>
       },
     ],

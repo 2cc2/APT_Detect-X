@@ -11,9 +11,7 @@ import { HorizontalNav } from '@/components/footer&hernav/hernav';
 import { SidebarWrapper } from '@/components/sidebar/sidebar';
 import Loading from '@/components/loading/loading';
 
-
 const { TabPane } = Tabs;
-
 
 export const KNN = () => {
     return (

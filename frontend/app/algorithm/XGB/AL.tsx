@@ -1,16 +1,5 @@
-import { Tabs } from 'antd';
 import React, { useEffect, useState } from 'react';
 import Markdown from '../../../components/markdown/Markdown';
-
-const { TabPane } = Tabs;
-
-export const Introduce = () => {
-
-    return (
-        <div >
-        </div>
-    );
-};
 
 export const Code = () => {
     const [markdown, setMarkdown] = useState('');
@@ -29,13 +18,6 @@ export const Code = () => {
         </div>
     );
 };
-
-// export const Show = () => {
-//     return (
-//         <div>
-//         </div>
-//     );
-// };
 
 export const XGB_AL = () => {
     return (

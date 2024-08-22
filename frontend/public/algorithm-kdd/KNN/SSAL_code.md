@@ -117,9 +117,12 @@ print(f"y_except Shape: {y_except.shape}")
 - Cell 2
 
 ```python KNN_SSAL_KDD_Lable.py
+import joblib
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import numpy as np
+
+from sklearn.model_selection import StratifiedKFold, TimeSeriesSplit, cross_val_score
 
 # 初始化KNN模型
 clf = KNeighborsClassifier(n_neighbors=5)
@@ -182,9 +185,36 @@ for iteration in range(max_iterations):
     # 重新训练模型
     clf.fit(X_train_labelled, y_train_labelled)
 
+# 保存训练好的模型
+joblib.dump(clf, '../model/kdd/KNN_SSAL.pkl')
+
 # 模型评估
 y_pred = clf.predict(X_test)
 print("Accuracy:", accuracy_score(y_test, y_pred))
 print("Classification Report:")
 print(classification_report(y_test, y_pred))
+
+# 交叉验证
+scores = cross_val_score(clf, pd.concat([X_train_labelled, X_test]), pd.concat([y_train_labelled, y_test]), cv=5)
+print("Cross-validation scores:", scores)
+print("Average cross-validation score:", scores.mean())
+print()
+
+
+# StratifiedKFold方法
+# 初始化StratifiedKFold
+skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+scores = []
+
+# 使用StratifiedKFold进行交叉验证
+for train_index, test_index in skf.split(X, y):
+    X_train, X_test = X.iloc[train_index], X.iloc[test_index]
+    y_train, y_test = y[train_index], y[test_index]
+    clf.fit(X_train, y_train)
+    scores.append(clf.score(X_test, y_test))
+
+print("StratifiedKFold cross-validation scores:", scores)
+print("Average score:", np.mean(scores))
+print()
+
 ```

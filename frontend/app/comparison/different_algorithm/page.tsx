@@ -1,12 +1,13 @@
 'use client';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import EChartComponent from '@/components/echart/MyEchart';
-import { Breadcrumb, Select } from 'antd';
+import { Breadcrumb, Button, message, Select, Upload } from 'antd';
 import { HorizontalNav } from '@/components/footer&hernav/hernav';
 import { SidebarWrapper } from '@/components/sidebar/sidebar';
-import { HomeOutlined } from '@ant-design/icons';
+import { HomeOutlined, UploadOutlined } from '@ant-design/icons';
 import { Footer } from '@/components/footer&hernav/Footer';
 import Loading from '@/components/loading/loading';
+import axios from 'axios';
 
 const { Option } = Select;
 
@@ -38,16 +39,16 @@ const Comparison_algorithm = () => {
     const [barOption, setBarOption] = useState<any>(null);
 
     useEffect(() => {
-        fetch('http://localhost:5001/data/results')
+        fetch('http://localhost:5001/kdd/models')
             .then(res => res.json())
-            .then(results => setResults(results.map((result: string) => result.replace('.json', ''))));
+            .then(results => setResults(results.map((result: string) => result.replace('.pkl', ''))));
     }, []);
 
     useEffect(() => {
         if (selectedOptions.length > 0) {
             Promise.all(
                 selectedOptions.map(option =>
-                    fetch(`http://localhost:5001/data/results/${option}`)
+                    fetch(`http://localhost:5001/kdd/evaluate/${option}`)
                         .then(res => res.json())
                 )
             ).then(setData);
@@ -188,15 +189,43 @@ const Comparison_algorithm = () => {
         }
     }, [data, selectedOptions]);
 
+    const handleUpload = async (file: any) => {
+        const formData = new FormData();
+        formData.append('file', file);
+
+        try {
+            const response = await axios.post('http://localhost:5001/kdd/upload', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            });
+            const uploadedData = response.data;
+            const modelName = file.name.replace('.pkl', '');
+            setData(prevData => [...prevData, uploadedData]);
+            setSelectedOptions(prevOptions => [...prevOptions, modelName]);
+            setResults(prevResults => [...prevResults, modelName]);
+            message.success('模型上传并评估成功');
+        } catch (error) {
+            message.error('模型上传或评估失败');
+        }
+    };
+
     return (
         <div>
             <Select
                 mode="multiple"
                 placeholder="Select algorithm to compare"
                 style={{ width: '100%', marginBottom: '10px' }}
-                onChange={(value: string[]) => setSelectedOptions(value.map((v: string) => v + '.json'))}>
+                value={selectedOptions}
+                onChange={(value: string[]) => setSelectedOptions(value)}>
                 {results.map((result: string) => <Option key={result} value={result}>{result}</Option>)}
             </Select>
+            <Upload
+                customRequest={({ file }) => handleUpload(file)}
+                showUploadList={false}
+            >
+                <Button icon={<UploadOutlined />}>上传模型</Button>
+            </Upload>
             <div style={{ marginTop: '30px' }}>
                 {option && <EChartComponent option={option} />}
             </div>

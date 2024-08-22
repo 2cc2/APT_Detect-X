@@ -1,5 +1,5 @@
 'use client';
-import { Breadcrumb, Tabs } from 'antd';
+import { Breadcrumb} from 'antd';
 import React, { useEffect, useState } from 'react';
 import { Card, CardBody, CardHeader } from "@nextui-org/react";
 import { SidebarWrapper } from '@/components/sidebar/sidebar';
@@ -7,9 +7,6 @@ import { HomeOutlined } from '@ant-design/icons';
 import { Footer } from '@/components/footer&hernav/Footer';
 import { HorizontalNav } from '@/components/footer&hernav/hernav';
 import Loading from '@/components/loading/loading';
-
-
-const { TabPane } = Tabs;
 
 export const Introduce_svm = () => {
     return (

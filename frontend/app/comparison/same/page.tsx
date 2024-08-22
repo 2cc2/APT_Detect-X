@@ -1,38 +1,45 @@
 'use client';
 import React, { useEffect, useState } from 'react'
 import EChartComponent from '@/components/echart/MyEchart';
-import { Breadcrumb, Select } from 'antd';
+import { Breadcrumb, Button, message, Select, Upload } from 'antd';
 import { HorizontalNav } from '@/components/footer&hernav/hernav';
 import { SidebarWrapper } from '@/components/sidebar/sidebar';
-import { HomeOutlined } from '@ant-design/icons';
+import { HomeOutlined, UploadOutlined } from '@ant-design/icons';
 import { Footer } from '@/components/footer&hernav/Footer';
 import Loading from '@/components/loading/loading';
+import axios from 'axios';
 
 const { Option } = Select;
 
-const Comparison_same = () => {
-    interface Data {
-        'Cross-validation scores': number[];
-        'StratifiedKFold cross-validation scores': number[];
-    }
+interface Data {
+    cross_val_scores: number[];
+    stratified_kfold_scores: number[];
+}
 
-    const [selectedOption, setSelectedOption] = useState<string | undefined>();
+const Comparison_same = () => {
+
+    const [selectedOption, setSelectedOption] = useState<string>();
     const [data, setData] = useState<Data | null>(null);
     const [results, setResults] = useState<string[]>([]);
-
     const [option, setOption] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:5001/data/results')
+        fetch('http://localhost:5001/kdd/models')
             .then(res => res.json())
-            .then(results => setResults(results.map((result: string) => result.replace('.json', ''))));
+            .then(results => setResults(results.map((result: string) => result.replace('.pkl', ''))));
     }, []);
 
     useEffect(() => {
         if (selectedOption) {
-            fetch(`http://localhost:5001/data/results/${selectedOption}.json`)
+            fetch(`http://localhost:5001/kdd/evaluate/${selectedOption}`)
                 .then(res => res.json())
-                .then(setData);
+                .then(response => {
+                    const newData: Data = {
+                        cross_val_scores: response.cross_val_score.scores,
+                        stratified_kfold_scores: response.stratified_kfold.scores
+                    };
+                    setData(newData);
+                });
         }
     }, [selectedOption]);
 
@@ -40,7 +47,7 @@ const Comparison_same = () => {
         if (data) {
             const seriesData = {
                 name: selectedOption || 'Option',
-                data: [data['Cross-validation scores'], data['StratifiedKFold cross-validation scores']],
+                data: [data.cross_val_scores, data.stratified_kfold_scores],
                 type: 'boxplot'
             };
 
@@ -79,7 +86,7 @@ const Comparison_same = () => {
                 },
                 yAxis: {
                     type: 'value',
-                    min: 0.5,
+                    min: 0.98,
                     max: 1,
                     splitArea: {
                         show: true
@@ -92,6 +99,30 @@ const Comparison_same = () => {
         }
     }, [data, selectedOption]);
 
+    const handleUpload = async (file: any) => {
+        const formData = new FormData();
+        formData.append('file', file);
+
+        try {
+            const response = await axios.post('http://localhost:5001/kdd/uploads', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            });
+            const uploadedData = response.data;
+            const modelName = file.name.replace('.pkl', '');
+            setData({
+                cross_val_scores: uploadedData.cross_val_score.scores,
+                stratified_kfold_scores: uploadedData.stratified_kfold.scores
+            });
+            setSelectedOption(modelName);
+            setResults(prevResults => [...prevResults, modelName]);
+            message.success('模型上传并评估成功');
+        } catch (error) {
+            message.error('模型上传或评估失败');
+        }
+    };
+
     return (
         <div>
             <Select
@@ -100,6 +131,12 @@ const Comparison_same = () => {
                 onChange={(value: string) => setSelectedOption(value)}>
                 {results.map((result: string) => <Option key={result} value={result}>{result}</Option>)}
             </Select>
+            <Upload
+                customRequest={({ file }) => handleUpload(file)}
+                showUploadList={false}
+            >
+                <Button icon={<UploadOutlined />}>上传模型</Button>
+            </Upload>
             <div style={{ marginTop: '80px' }}>
                 {option && <EChartComponent option={option} />}
             </div>

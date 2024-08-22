@@ -1,4 +1,3 @@
-// 'use client'
 import { Jupyter, Notebook, CellSidebar } from '@datalayer/jupyter-react';
 import { NotebookToolbar } from '@datalayer/jupyter-react/lib/examples/toolbars/NotebookToolbar';
 // import { Theme } from '@primer/react/lib/ThemeProvider';
@@ -9,8 +8,6 @@ type NotebookComponentProps = {
   theme: Theme;
 }
 
-
-
 export const NotebookComponent = (props: NotebookComponentProps) => {
   const { colorMode, theme } = props;
   return (
@@ -19,7 +16,7 @@ export const NotebookComponent = (props: NotebookComponentProps) => {
       <Jupyter
         jupyterServerHttpUrl="http://localhost:8888"
         jupyterServerWsUrl="ws://localhost:8888"
-        jupyterToken="d41683474efda7dde9698075e1183f50fdd0bbad3c0a3314"
+        jupyterToken="dcb4ef63efc885047aca7adbc47040af8fa8776297a2a70a"
         colorMode={colorMode}
         theme={theme}
       >

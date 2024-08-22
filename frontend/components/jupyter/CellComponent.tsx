@@ -1,4 +1,3 @@
-// 'use client'
 import { Theme } from '../../node_modules/@primer/components/lib/ThemeProvider';
 import { Jupyter, Cell } from '@datalayer/jupyter-react';
 
@@ -15,7 +14,7 @@ export const CellComponent = (props: CellComponentProps) => {
       <Jupyter
         jupyterServerHttpUrl="https://oss.datalayer.run/api/jupyter-server"
         jupyterServerWsUrl="wss://oss.datalayer.run/api/jupyter-server"
-        jupyterToken="d41683474efda7dde9698075e1183f50fdd0bbad3c0a3314"
+        jupyterToken="dcb4ef63efc885047aca7adbc47040af8fa8776297a2a70a"
         colorMode={colorMode}
         theme={theme}
       >

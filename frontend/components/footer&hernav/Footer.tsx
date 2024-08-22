@@ -3,7 +3,7 @@ export function Footer() {
       <footer style={{ 
         backgroundColor: '#505050', // 修改背景色为黑色
         color: '#fff', // 修改文字颜色为白色
-        padding: '10px', 
+        padding: '5px', 
         textAlign: 'center', 
         position: 'relative', 
         zIndex: 0 

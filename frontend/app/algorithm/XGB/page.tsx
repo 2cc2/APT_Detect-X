@@ -1,7 +1,6 @@
 'use client';
 import { Breadcrumb, Tabs } from 'antd';
 import React, { useEffect, useState } from 'react';
-import Markdown from '../../../components/markdown/Markdown';
 import { XGB_AL } from './AL';
 import { XGB_S } from './S';
 import { XGB_SS } from './SS';

@@ -1,6 +1,4 @@
 # KNN_S_Log算法
-
-
 ```python 
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.neighbors import KNeighborsClassifier

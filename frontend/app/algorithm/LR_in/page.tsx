@@ -7,10 +7,6 @@ import { HomeOutlined } from '@ant-design/icons';
 import { Footer } from '@/components/footer&hernav/Footer';
 import { HorizontalNav } from '@/components/footer&hernav/hernav';
 import Loading from '@/components/loading/loading';
-// import MathJax from '@matejmazur/react-mathjax';
-
-
-const { TabPane } = Tabs;
 
 export const Introduce_lr = () => {
     return (

@@ -7,6 +7,11 @@ import { HomeOutlined } from '@ant-design/icons';
 import { Footer } from '@/components/footer&hernav/Footer';
 import { HorizontalNav } from '@/components/footer&hernav/hernav';
 import Loading from '@/components/loading/loading';
+import Card1 from './card1';
+import Card2 from './card2';
+import Card3 from './card3';
+import Card4 from './card4';
+import Card5 from './card5';
 
 
 const { TabPane } = Tabs;
@@ -223,7 +228,11 @@ const Learn_more = () => {
                 <Layout>
                     <div>
                         <TopNavbar />
-                        <Learn />
+                            <Card1 />
+                            <Card2 />
+                            <Card3 />
+                            <Card4 />
+                            <Card5 />
                     </div>
                     <div style={{ position: 'fixed', bottom: 0, width: '100%', }}>
                         <Footer />

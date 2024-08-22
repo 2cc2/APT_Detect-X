@@ -38,16 +38,16 @@ const Comparison_dataset = () => {
     const [barOption, setBarOption] = useState<any>(null);
 
     useEffect(() => {
-        fetch('http://localhost:5001/data/comparison')
+        fetch('http://localhost:5001/log/model')
             .then(res => res.json())
-            .then(options => setOptions(options.map((option: string) => option.replace('.json', ''))));
+            .then(options => setOptions(options.map((option: string) => option.replace('.pkl', ''))));
     }, []);
 
     useEffect(() => {
         if (selectedOption) {
             Promise.all([
-                fetch(`http://localhost:5001/data/results/${selectedOption}`).then(res => res.json()),
-                fetch(`http://localhost:5001/data/comparison/${selectedOption}`).then(res => res.json())
+                fetch(`http://localhost:5001/kdd/evaluate/${selectedOption}`).then(res => res.json()),
+                fetch(`http://localhost:5001/log/evaluates/${selectedOption}`).then(res => res.json())
             ]).then(([data1, data2]) => {
                 // 检查data1和data2是否是可迭代的
                 if (data1 && typeof data1[Symbol.iterator] !== 'function') {

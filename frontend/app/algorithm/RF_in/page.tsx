@@ -8,9 +8,6 @@ import { Footer } from '@/components/footer&hernav/Footer';
 import { HorizontalNav } from '@/components/footer&hernav/hernav';
 import Loading from '@/components/loading/loading';
 
-
-const { TabPane } = Tabs;
-
 export const Introduce_rf = () => {
     return (
         <div className="h-full lg:px-6">

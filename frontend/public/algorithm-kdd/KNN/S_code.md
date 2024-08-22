@@ -16,9 +16,9 @@ import warnings
 warnings.filterwarnings("ignore", message="Glyph .* missing from current font.")
 
 # 替换为实际数据集路径
-labelled_data_path = 'kddcup_1_percent'
-unlabelled_data_path = 'kddcup_1_percent.unlabeled'
-except_path = 'kddcup_1_percent'
+labelled_data_path = '../data/kddcup_1_percent'
+unlabelled_data_path = '../data/kddcup_1_percent.unlabeled'
+except_path = '../data/kddcup_1_percent'
 
 # 读取有标签的数据集
 df_labelled = pd.read_csv(labelled_data_path, header=None)
@@ -110,6 +110,7 @@ print(f"X_test Shape: {X_test.shape}")
 print(f"y_test Shape: {y_test.shape}")
 print(f"X_except Shape: {X_except.shape}")
 print(f"y_except Shape: {y_except.shape}")
+
 ```
 
 ## 数据标注
@@ -117,12 +118,14 @@ print(f"y_except Shape: {y_except.shape}")
 - Cell 2
 
 ```python KNN_S_KDD_Lable.py
+import joblib
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import numpy as np
 import pandas as pd
 import warnings
 warnings.filterwarnings("ignore")
+from sklearn.model_selection import StratifiedKFold, TimeSeriesSplit, cross_val_score
 
 # 假设 X_train, y_train, X_test, y_test 已经定义
 
@@ -144,11 +147,37 @@ for i in range(iterations):
     
     # 使用更新后的数据集重新训练模型
     clf.fit(X_train, y_train)
-    
-    # 模型评估
-    y_pred = clf.predict(X_test)
-    print(f"Iteration {i+1}:")
-    print("Accuracy:", accuracy_score(y_test, y_pred))
-    print("Classification Report:")
-    print(classification_report(y_test, y_pred))
+
+# 保存训练好的模型
+joblib.dump(clf, '../model/kdd/KNN_S.pkl')
+
+# 模型评估
+y_pred = clf.predict(X_test)
+print(f"Iteration {i+1}:")
+print("Accuracy:", accuracy_score(y_test, y_pred))
+print("Classification Report:")
+print(classification_report(y_test, y_pred))
+
+# 交叉验证方法1: cross_val_score
+cv_scores = cross_val_score(clf, X_train, y_train, cv=5)
+print("Cross-validation scores (cross_val_score):", cv_scores)
+print("Average cross-validation score:", np.mean(cv_scores))
+print()
+
+# 交叉验证方法2: StratifiedKFold
+# 初始化StratifiedKFold
+skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+scores = []
+
+# 使用StratifiedKFold进行交叉验证
+for train_index, test_index in skf.split(X_train, y_train):
+    X_train_fold, X_test_fold = X_train[train_index], X_train[test_index]
+    y_train_fold, y_test_fold = y_train[train_index], y_train[test_index]
+    clf.fit(X_train_fold, y_train_fold)
+    scores.append(clf.score(X_test_fold, y_test_fold))
+
+print("StratifiedKFold cross-validation scores:", scores)
+print("Average score:", np.mean(scores))
+print()
+
 ```

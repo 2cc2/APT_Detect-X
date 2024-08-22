@@ -114,15 +114,17 @@ print(f"y_except Shape: {y_except.shape}")
 
 ## 数据标注
 
-- Cell 1
+- Cell 2
 
 ```python RF_SSAL_KDD_Lable.py
-# 步骤1: 导入必要的库
+import joblib
 import numpy as np
 import pandas as pd
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.ensemble import RandomForestClassifier
 import warnings
+
+from sklearn.model_selection import StratifiedKFold, TimeSeriesSplit, cross_val_score
 
 warnings.filterwarnings("ignore")
 
@@ -178,11 +180,34 @@ for iteration in range(max_iterations):
     
     clf.fit(X_train_labelled, y_train_labelled)
 
-# 步骤4: 模型评估
-y_pred = clf.predict(X_test)
-y_pred_proba = clf.predict_proba(X_test)[:, 1]
+# 保存训练好的模型
+joblib.dump(clf, '../model/kdd/RF_SSAL.pkl')
 
+# 模型评估
+y_pred = clf.predict(X_test)
 print("Accuracy:", accuracy_score(y_test, y_pred))
 print("Classification Report:")
 print(classification_report(y_test, y_pred))
+
+# 交叉验证
+scores = cross_val_score(clf, pd.concat([X_train_labelled, X_test]), pd.concat([y_train_labelled, y_test]), cv=5)
+print("Cross-validation scores:", scores)
+print("Average cross-validation score:", scores.mean())
+
+
+# StratifiedKFold方法
+# 初始化StratifiedKFold
+skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+scores = []
+
+# 使用StratifiedKFold进行交叉验证
+for train_index, test_index in skf.split(X, y):
+    X_train, X_test = X.iloc[train_index], X.iloc[test_index]
+    y_train, y_test = y[train_index], y[test_index]
+    clf.fit(X_train, y_train)
+    scores.append(clf.score(X_test, y_test))
+
+print("StratifiedKFold cross-validation scores:", scores)
+print("Average score:", np.mean(scores))
+
 ```

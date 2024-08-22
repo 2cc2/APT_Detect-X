@@ -4,14 +4,6 @@ import Markdown from '../../../components/markdown/Markdown';
 
 const { TabPane } = Tabs;
 
-export const Introduce = () => {
-
-    return (
-        <div >
-        </div>
-    );
-};
-
 export const Code = () => {
     const [markdown, setMarkdown] = useState('');
 

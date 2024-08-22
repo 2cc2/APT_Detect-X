@@ -6,14 +6,9 @@ const { Item } = Menu;
 
 export const HorizontalNav: React.FC = () => {
   return (
-    <>
-    
+    <>  
     <Menu mode="horizontal" style={{ width: '100%', height: '66px', display: 'flex',justifyContent: 'flex-start', alignItems: 'center' }}>
-      
-    {/* <Divider type="vertical" style={{ height: '64px', borderWidth: 2 ,borderColor:"#909090",marginRight: '1px' }} />
-    <Divider type="vertical" style={{ height: '58px', borderWidth: 2 ,borderColor:"#a1a1a1",marginRight: '1px'}} />
-    <Divider type="vertical" style={{ height: '54px', borderWidth: 2 ,borderColor:"#b0b0b0",marginRight: '1px'}} /> */}
-    
+   
       <div style={{ marginLeft: '10px'}}>  
         <Image width={55} height={55} src="https://img.icons8.com/nolan/64/paper-plane.png" alt="paper-plane" style={{ transform: 'rotate(315deg)' }} />
       </div>
@@ -79,7 +74,7 @@ export const HorizontalNav: React.FC = () => {
             fontWeight: 'bold',
             // padding: '3px'
       }}>
-        <Item key="HELP" icon={<QuestionCircleOutlined style={{ fontSize: '18px' }} />} onClick={() => window.location.href = '/help'}>
+          <Item key="HELP" icon={<QuestionCircleOutlined style={{ fontSize: '18px' }} />} onClick={() => window.location.href = 'C:/wsn/222AAA/cti-stix-visualization/index.html'}>
             HELP
         </Item>
       </div>

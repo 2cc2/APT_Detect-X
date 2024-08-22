@@ -1,13 +1,11 @@
 'use client';
 import type { NextPage } from "next";
 import { Content } from "@/components/dashboard/content";
-import { Layout } from "../../components/layout/layout";
 import { Providers } from "./providers";
 import { Footer } from "@/components/footer&hernav/Footer";
 import WorldMap from "./worldmap";
 import { useEffect, useState } from "react";
 import Loading from "@/components/loading/loading";
-import { Divider } from "antd";
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(true);
@@ -35,7 +33,7 @@ const Home: NextPage = () => {
                     <WorldMap />
                   </div>
 
-              <Content />;
+              <Content />
               <div style={{ position: 'fixed', bottom: 0, width: '100%' }}>
                 <Footer />
               </div>
